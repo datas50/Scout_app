@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_action.xml"
+    }
+]

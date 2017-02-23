@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher_round.png",
+        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    }
+]

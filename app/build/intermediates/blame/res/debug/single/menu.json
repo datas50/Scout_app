@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/menu/menu_data_select.xml",
+        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/src/main/res/menu/menu_data_select.xml"
+    },
+    {
+        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/menu/menu_this_device.xml",
+        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/src/main/res/menu/menu_this_device.xml"
+    },
+    {
+        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/menu/drawer_menu.xml",
+        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/src/main/res/menu/drawer_menu.xml"
+    },
+    {
+        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/menu/menu_home.xml",
+        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/src/main/res/menu/menu_home.xml"
+    },
+    {
+        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/menu/menu_scouting_flow.xml",
+        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/src/main/res/menu/menu_scouting_flow.xml"
+    }
+]

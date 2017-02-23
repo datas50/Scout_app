@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ThunderScout</string>
+
+    <string name="app_version">2017 (BETA)</string> <!--This is where we track the version -->
+
+    <string name="build_variant"></string> <!--Nothing will show-->
+
+    <string-array name="climbing_stats_array">
+        <item>Did not climb</item>
+        <item>Attempted climb</item>
+        <item>Pressed touchpad</item>
+    </string-array>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="shortcut_match_scout_short">Match scout</string>
+    <string name="shortcut_match_scout_long">Scout a match</string>
+</resources>
