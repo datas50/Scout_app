@@ -71,6 +71,20 @@ public class ScoutDataWriteTask extends AsyncTask<Void, Integer, Void> {
         values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_AUTO_CROSSED_BASELINE, data.hasCrossedBaseline());
 
         // Teleop
+        values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_COLLECT_BALLS_TIME, data.getCollectballssw());
+        values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_CHUTE, data.getCollectGearsChute());
+        values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_FLOOR, data.getCollectGearsFloor());
+        values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_SCORED, data.getTeleopGearsScored());
+        values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_1, data.getFd1());
+        values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_2, data.getFd2());
+        values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_3, data.getFd3());
+        values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_4, data.getFd4());
+        values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_5, data.getFd5());
+        values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_ALTER_SHOT, data.getAltshot());
+        values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_BLOCKED_PEG, data.getBlockedpeg());
+        values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_PREVENT_CLIMB, data.getPreventclimb());
+        values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_OTHER, data.getOther());
+
         values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_DELIVERED, data.getTeleopGearsDelivered());
         values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_LOW_GOAL_DUMPS, ThunderScout.serializeObject(data.getTeleopLowGoalDumps()));
         values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_HIGH_GOALS, data.getTeleopHighGoals());
@@ -80,6 +94,7 @@ public class ScoutDataWriteTask extends AsyncTask<Void, Integer, Void> {
         // Summary
         values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_TROUBLE_WITH, data.getTroubleWith());
         values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_COMMENTS, data.getComments());
+        values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_PILOT, data.getPilot());
 
         try {
             // Insert the new row
