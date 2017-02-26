@@ -32,9 +32,7 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
 
     private LinearLayoutManager layoutManager;
     private DumpCounterAdapter adapter;
-    private TextView collecttv;
-    private TextView txtTimer;
-    private EditText editTimer;
+    private TextView timeView;
     Handler customHandler = new Handler();
     private Integer presses=0;
     private TextView press;
@@ -46,6 +44,7 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
     //Is the stopwatch running?
     private boolean running;
     private boolean wasRunning;
+    private Integer i=0, j = 0, k = 0;
 
     long startTime=0L,timeInMilliseconds=0L,timeSwapBuff=0L,updateTime=0L;
 
@@ -60,7 +59,25 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
         startButton.setOnClickListener(this);
         Button stopButton = (Button) layout.findViewById(R.id.pausecollect);
         stopButton.setOnClickListener(this);
+        CheckBox checkBox = (CheckBox) layout.findViewById(R.id.cbalteredshot);
+        CheckBox checkBox2 = (CheckBox) layout.findViewById(R.id.cbpreventedclimb);
+        CheckBox checkBox1 = (CheckBox) layout.findViewById(R.id.cbblockedpeg);
+        checkBox.setOnClickListener(this);
+        checkBox1.setOnClickListener(this);
+        checkBox2.setOnClickListener(this);
         radioGroup0 = (RadioGroup) layout.findViewById(R.id.dump1);
+        radioButton0 = (RadioButton) layout.findViewById(R.id.dump1rb0);
+        radioButton1 = (RadioButton) layout.findViewById(R.id.dump1rb1);
+        radioButton2 = (RadioButton) layout.findViewById(R.id.dump1rb2);
+        radioButton3 = (RadioButton) layout.findViewById(R.id.dump1rb3);
+        radioButton4 = (RadioButton) layout.findViewById(R.id.dump1rb4);
+        radioGroup0.setOnClickListener(this);
+
+        radioGroup1 = (RadioGroup) layout.findViewById(R.id.dump2);
+        radioGroup2 = (RadioGroup) layout.findViewById(R.id.dump3);
+        radioGroup3 = (RadioGroup) layout.findViewById(R.id.dump4);
+        radioGroup4 = (RadioGroup) layout.findViewById(R.id.dump5);
+
 
         //    Button resetButton = (Button) layout.findViewById(R.id.reset_button);
         //    resetButton.setOnClickListener(this);
@@ -119,21 +136,35 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
                 break;
             case R.id.cbalteredshot:
                 CheckBox checkBox = (CheckBox) v;
+                if(checkBox.isChecked()){
+                    int i = 1;
+                }else{
+                    int i = 0;
+                }
 
-                scoutingFlowActivity.getData().setAltshot(checkBox.isChecked());
+                scoutingFlowActivity.getData().setAltshot(i);
             case R.id.cbblockedpeg:
                 CheckBox checkBox1 = (CheckBox) v;
+                if(checkBox1.isChecked()){
+                    int j = 1;
+                }else{
+                    int j = 0;
+                }
 
-                scoutingFlowActivity.getData().setBlockedpeg(checkBox1.isChecked());
+                scoutingFlowActivity.getData().setBlockedpeg(j);
             case R.id.cbpreventedclimb:
                 CheckBox checkBox2 = (CheckBox) v;
-
-                scoutingFlowActivity.getData().setBlockedpeg(checkBox2.isChecked());
-            case R.id.collectballstimereturn:
-                scoutingFlowActivity.getData().setCollectballssw(R.id.collectballstimereturn);
+                if(checkBox2.isChecked()){
+                    int k = 1;
+                }else{
+                    int k = 0;
+                }
+                scoutingFlowActivity.getData().setPreventclimb(k);
+            //case R.id.collectballstimereturn:
+             //   scoutingFlowActivity.getData().setCollectballssw(R.id.collectballstimereturn);
             case R.id.dump1:
                 int id0 = radioGroup0.getCheckedRadioButtonId();
-                radioButton0 = (RadioButton) radioGroup0.findViewById(id0);
+                 radioButton0 = (RadioButton) radioGroup0.findViewById(id0);
                 scoutingFlowActivity.getData().setFd1(radioButton0.getText().toString());
             case R.id.dump2:
                 int id1 = radioGroup1.getCheckedRadioButtonId();
@@ -181,7 +212,7 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
         adapter = new DumpCounterAdapter();
         fuelDumps.setAdapter(adapter);
 
-        collecttv = (TextView) view.findViewById(R.id.collectballstimereturn);
+
 
         if (savedInstanceState != null) {
             layoutManager.onRestoreInstanceState(savedInstanceState.getParcelable("LayoutManager"));
@@ -246,7 +277,7 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
     }
 
     private void runTimer(View view) {
-        final TextView timeView = (TextView) view.findViewById(R.id.collectballstimereturn);
+        //final TextView timeView = (TextView) view.findViewById(R.id.time_view);
         final Handler handler = new Handler();
         handler.post(new Runnable() {
             @Override

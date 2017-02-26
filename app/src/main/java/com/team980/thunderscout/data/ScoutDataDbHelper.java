@@ -40,9 +40,9 @@ public class ScoutDataDbHelper extends SQLiteOpenHelper {
                     ScoutDataTable.COLUMN_NAME_FUEL_DUMP_3 + TEXT_TYPE + COMMA_SEP +
                     ScoutDataTable.COLUMN_NAME_FUEL_DUMP_4 + TEXT_TYPE + COMMA_SEP +
                     ScoutDataTable.COLUMN_NAME_FUEL_DUMP_5 + TEXT_TYPE + COMMA_SEP +
-                    ScoutDataTable.COLUMN_NAME_ALTER_SHOT + "BOOLEAN" + COMMA_SEP +
-                    ScoutDataTable.COLUMN_NAME_PREVENT_CLIMB + "BOOLEAN" + COMMA_SEP +
-                    ScoutDataTable.COLUMN_NAME_BLOCKED_PEG + "BOOLEAN" + COMMA_SEP +
+                    ScoutDataTable.COLUMN_NAME_ALTER_SHOT + INTEGER_TYPE + COMMA_SEP +
+                    ScoutDataTable.COLUMN_NAME_PREVENT_CLIMB + INTEGER_TYPE + COMMA_SEP +
+                    ScoutDataTable.COLUMN_NAME_BLOCKED_PEG + INTEGER_TYPE + COMMA_SEP +
                     ScoutDataTable.COLUMN_NAME_OTHER + TEXT_TYPE + COMMA_SEP +
 
 

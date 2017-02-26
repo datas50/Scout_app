@@ -22,6 +22,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.team980.thunderscout.R;
 import com.team980.thunderscout.bluetooth.ClientConnectionThread;
@@ -374,9 +375,29 @@ public class ScoutingFlowActivity extends AppCompatActivity implements ViewPager
         // Teleop
         View teleopView = viewPagerAdapter.getItem(1).getView();
 
-        //CounterCompoundView teleopGearsDelivered = (CounterCompoundView) teleopView.findViewById(R.id.teleop_counterGearsDelivered);
+        final TextView timeView = (TextView) teleopView.findViewById(R.id.time_view);
 
-        //scoutData.setTeleopGearsDelivered((int) teleopGearsDelivered.getValue());
+        scoutData.setCollectballssw(timeView.getText().toString()) ;
+
+        EditText otherdef = (EditText) teleopView.findViewById(R.id.other);
+
+        scoutData.setOther(otherdef.getText().toString());
+
+        CounterCompoundView teleopGearsDelivered = (CounterCompoundView) teleopView.findViewById(R.id.teleop_counterDeliverGears);
+
+        scoutData.setTeleopGearsDelivered((int) teleopGearsDelivered.getValue());
+
+        CounterCompoundView teleopGearsCollectedChute = (CounterCompoundView) teleopView.findViewById(R.id.teleop_counterCollectGearsChute);
+
+        scoutData.setCollectGearsChute((int) teleopGearsCollectedChute.getValue());
+
+        CounterCompoundView teleopGearsCollectedFloor = (CounterCompoundView) teleopView.findViewById(R.id.teleop_counterCollectGearsFloor);
+
+        scoutData.setCollectGearsFloor((int) teleopGearsCollectedFloor.getValue());
+
+        CounterCompoundView teleopGearsScored = (CounterCompoundView) teleopView.findViewById(R.id.teleop_counterScoreGears);
+
+        scoutData.setTeleopGearsScored((int) teleopGearsScored.getValue());
 
         scoutData.getTeleopLowGoalDumps().addAll(((TeleopFragment) viewPagerAdapter.getItem(1)).getFuelDumpAdapter().get());
 

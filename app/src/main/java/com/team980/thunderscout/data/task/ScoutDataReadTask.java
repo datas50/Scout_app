@@ -81,12 +81,25 @@ public class ScoutDataReadTask extends AsyncTask<Void, ScoutData, Void> {
                 ScoutDataTable.COLUMN_NAME_AUTO_MISSED_HIGH_GOALS,
                 ScoutDataTable.COLUMN_NAME_AUTO_CROSSED_BASELINE,
 
+                ScoutDataTable.COLUMN_NAME_COLLECT_BALLS_TIME,
+                ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_CHUTE,
+                ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_FLOOR,
+                ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_SCORED,
                 ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_DELIVERED,
                 ScoutDataTable.COLUMN_NAME_TELEOP_LOW_GOAL_DUMPS,
                 ScoutDataTable.COLUMN_NAME_TELEOP_HIGH_GOALS,
                 ScoutDataTable.COLUMN_NAME_TELEOP_MISSED_HIGH_GOALS,
+                ScoutDataTable.COLUMN_NAME_FUEL_DUMP_1,
+                ScoutDataTable.COLUMN_NAME_FUEL_DUMP_2,
+                ScoutDataTable.COLUMN_NAME_FUEL_DUMP_3,
+                ScoutDataTable.COLUMN_NAME_FUEL_DUMP_4,
+                ScoutDataTable.COLUMN_NAME_FUEL_DUMP_5,
+                ScoutDataTable.COLUMN_NAME_ALTER_SHOT,
+                ScoutDataTable.COLUMN_NAME_PREVENT_CLIMB,
+                ScoutDataTable.COLUMN_NAME_BLOCKED_PEG,
+                ScoutDataTable.COLUMN_NAME_OTHER,
                 ScoutDataTable.COLUMN_NAME_CLIMBING_STATS,
-
+                ScoutDataTable.COLUMN_NAME_PILOT,
                 ScoutDataTable.COLUMN_NAME_TROUBLE_WITH,
                 ScoutDataTable.COLUMN_NAME_COMMENTS
         };
@@ -185,10 +198,34 @@ public class ScoutDataReadTask extends AsyncTask<Void, ScoutData, Void> {
         data.setCrossedBaseline(crossedBaseline != 0); //I2B conversion
 
         // Teleop
+
+        String timeView = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_COLLECT_BALLS_TIME));
+
+        data.setCollectballssw(timeView);
+
+        int teleopGearsCollectedChute = cursor.getInt(
+                cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_CHUTE));
+
+        data.setCollectGearsChute(teleopGearsCollectedChute);
+
+        int teleopGearsCollectedFloor = cursor.getInt(
+                cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_FLOOR));
+
+        data.setCollectGearsFloor(teleopGearsCollectedFloor););
+
+        int teleopGearsScored = cursor.getInt(
+                cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_SCORED));
+
+        data.setTeleopGearsScored(teleopGearsScored);
+
+
         int teleopGearsDelivered = cursor.getInt(
                 cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_DELIVERED));
 
         data.setTeleopGearsDelivered(teleopGearsDelivered);
+
+
 
         byte[] teleopLowGoalDumps = cursor.getBlob(
                 cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_TELEOP_LOW_GOAL_DUMPS));
@@ -204,6 +241,18 @@ public class ScoutDataReadTask extends AsyncTask<Void, ScoutData, Void> {
                 cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_TELEOP_MISSED_HIGH_GOALS));
 
         data.setTeleopMissedHighGoals(teleopMissedHighGoals);
+//TODO figure out how to deal with the radio buttons.
+        String fd1 = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_FUEL_DUMP_1));
+
+        data.getFd1(fd1);
+
+        // to an integer.
+        int checkBox = cursor.getInt(
+                cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_ALTER_SHOT));
+
+        data.setAltshot(checkBox);
+
 
         String climbingStats = cursor.getString(
                 cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_CLIMBING_STATS));

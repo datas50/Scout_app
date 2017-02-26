@@ -47,15 +47,15 @@ public class ScoutData implements Serializable {
     private int teleopHighGoals;
     private int teleopMissedHighGoals;
     private ClimbingStats climbingStats;
-    private long collectballssw;
+    private String time_view;
     private String fd1;
     private String fd2;
     private String fd3;
     private String fd4;
     private String fd5;
-    private boolean altshot;
-    private boolean preventclimb;
-    private boolean blockedpeg;
+    private int altshot;
+    private int preventclimb;
+    private int blockedpeg;
     private String other;
 
 
@@ -92,7 +92,20 @@ public class ScoutData implements Serializable {
         setCrossedBaseline(other.hasCrossedBaseline());
 
         //Teleop
+        setCollectGearsChute(other.getCollectGearsChute());
+        setCollectGearsFloor(other.getCollectGearsFloor());
+        setTeleopGearsScored(other.getTeleopGearsScored());
         setTeleopGearsDelivered(other.getTeleopGearsDelivered());
+        setCollectballssw(other.getCollectballssw());
+        setFd1(other.getFd1());
+        setFd2(other.getFd2());
+        setFd3(other.getFd3());
+        setFd4(other.getFd4());
+        setFd5(other.getFd5());
+        setAltshot(other.getAltshot());
+        setPreventclimb(other.getPreventclimb());
+        setBlockedpeg(other.getBlockedpeg());
+        setOther(other.getOther());
         teleopLowGoalDumps = other.getTeleopLowGoalDumps();
         setTeleopHighGoals(other.getTeleopHighGoals());
         setTeleopMissedHighGoals(other.getTeleopMissedHighGoals());
@@ -101,6 +114,7 @@ public class ScoutData implements Serializable {
         //Summary
         setTroubleWith(other.getTroubleWith());
         setComments(other.getComments());
+        setPilot(other.getPilot());
     }
 
     // --- INIT ---
@@ -221,12 +235,12 @@ public class ScoutData implements Serializable {
         this.teleopgearsscored = teleopgearsscored;
     }
 
-    public long getCollectballssw() {
-        return collectballssw;
+    public String getCollectballssw() {
+        return time_view;
     }
 
-    public void setCollectballssw (int collectballssw) {
-        this.collectballssw = collectballssw;
+    public void setCollectballssw (String time_view) {
+        this.time_view = time_view;
     }
 
     public String getFd1() {
@@ -269,27 +283,27 @@ public class ScoutData implements Serializable {
         this.fd5 = fd5;
     }
 
-    public Boolean getAltshot() {
+    public int getAltshot() {
         return altshot;
     }
 
-    public void setAltshot (Boolean altshot) {
+    public void setAltshot (int altshot) {
         this.altshot = altshot;
     }
 
-    public Boolean getPreventclimb() {
+    public int getPreventclimb() {
         return preventclimb;
     }
 
-    public void setPreventclimb (Boolean preventclimb) {
+    public void setPreventclimb (int preventclimb) {
         this.preventclimb = preventclimb;
     }
 
-    public Boolean getBlockedpeg() {
+    public int getBlockedpeg() {
         return blockedpeg;
     }
 
-    public void setBlockedpeg (Boolean blockedpeg) {
+    public void setBlockedpeg (int blockedpeg) {
         this.blockedpeg = blockedpeg;
     }
 
