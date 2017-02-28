@@ -277,7 +277,7 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
     }
 
     private void runTimer(View view) {
-        //final TextView timeView = (TextView) view.findViewById(R.id.time_view);
+         timeView = (EditText) view.findViewById(R.id.time_view);
         final Handler handler = new Handler();
         handler.post(new Runnable() {
             @Override

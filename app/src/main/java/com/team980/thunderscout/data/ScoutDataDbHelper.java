@@ -8,7 +8,7 @@ import static com.team980.thunderscout.data.ScoutDataContract.ScoutDataTable;
 
 public class ScoutDataDbHelper extends SQLiteOpenHelper {
     // If you change the database schema, you must increment the database version.
-    public static final int DATABASE_VERSION = 2;
+    public static final int DATABASE_VERSION = 3;
 
     public static final String DATABASE_NAME = "ThunderScout_SCOUT_DATA_2017.db"; //Store year in database name but DO NOT CHANGE FORMAT
 
@@ -59,8 +59,8 @@ public class ScoutDataDbHelper extends SQLiteOpenHelper {
                     ScoutDataTable.COLUMN_NAME_CLIMBING_STATS + TEXT_TYPE + COMMA_SEP +
 
                     ScoutDataTable.COLUMN_NAME_TROUBLE_WITH + TEXT_TYPE + COMMA_SEP +
-                    ScoutDataTable.COLUMN_NAME_COMMENTS + TEXT_TYPE +
-                    ScoutDataTable.COLUMN_NAME_PILOT + "BOOLEAN" + ")";
+                    ScoutDataTable.COLUMN_NAME_COMMENTS + TEXT_TYPE + COMMA_SEP +
+                    ScoutDataTable.COLUMN_NAME_PILOT + INTEGER_TYPE + ")";
 
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + ScoutDataTable.TABLE_NAME;

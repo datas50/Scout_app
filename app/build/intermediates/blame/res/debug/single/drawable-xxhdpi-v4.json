@@ -72,12 +72,12 @@
         "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_focused.9.png"
     },
     {
-        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_light_pressed.9.png",
-        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_pressed.9.png"
-    },
-    {
         "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_light_focused.9.png",
         "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_focused.9.png"
+    },
+    {
+        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_light_pressed.9.png",
+        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_pressed.9.png"
     },
     {
         "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_half_black_36dp.png",
