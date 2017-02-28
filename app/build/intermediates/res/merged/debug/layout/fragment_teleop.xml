@@ -64,8 +64,8 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/collectballstimereturn"
-                        android:inputType="text" />
+                        android:id="@+id/time_view"
+                        android:text="0:00:000"/>
 
 
                 </LinearLayout>
@@ -155,8 +155,8 @@
                         android:text="Pause"
                         android:layout_height="40dp"
                         android:layout_width="120dp" />
-                    <EditText
-                        android:text="0:00:000"
+                    <TextView
+                        android:text ="0:00:000"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/climbtimereturn" />
@@ -596,7 +596,8 @@
                         android:fontFamily="sans-serif" />
                     <EditText
                         android:layout_width="200dp"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:id="@+id/other" />
                 </LinearLayout>
 
             </LinearLayout>

@@ -27,7 +27,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-
+import android.widget.Toast;
 import com.team980.thunderscout.MainActivity;
 import com.team980.thunderscout.R;
 import com.team980.thunderscout.feed.task.FeedDataClearTask;
@@ -45,6 +45,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
 
     private BroadcastReceiver refreshReceiver;
 
+    Toolbar toolbar;
+
     public static final String ACTION_REFRESH_VIEW_PAGER = "com.team980.thunderscout.feed.REFRESH_VIEW_PAGER"; //conveniently different from the other one
 
     @Override
@@ -58,7 +60,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
 
         MainActivity activity = (MainActivity) getActivity();
 
-        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+        toolbar = (Toolbar) view.findViewById(R.id.toolbar);
         toolbar.setTitle("ThunderScout");
         activity.setSupportActionBar(toolbar);
 
@@ -137,6 +139,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.fab_scout) {
+
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
 
             if (!prefs.getBoolean("enable_match_scout", true)) { //Saving locally
@@ -144,6 +147,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
             }
 
             Intent scoutIntent = new Intent(getContext(), ScoutingFlowActivity.class); //start scouting (I think)
+            //Toast.makeText(getActivity(), "Sending to Google Sheets...", Toast.LENGTH_LONG).show();
             startActivity(scoutIntent);
         }
     }

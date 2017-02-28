@@ -36,7 +36,7 @@ public class SummaryFragment extends Fragment implements View.OnClickListener{
             int m = 0;
         }
 
-        scoutingFlowActivity.getData().setBlockedpeg(m);
+        scoutingFlowActivity.getData().setPilot(m);
 
     }
 

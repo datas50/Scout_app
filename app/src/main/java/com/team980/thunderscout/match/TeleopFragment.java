@@ -32,7 +32,7 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
 
     private LinearLayoutManager layoutManager;
     private DumpCounterAdapter adapter;
-    private TextView timeView;
+    private EditText timeView;
     Handler customHandler = new Handler();
     private Integer presses=0;
     private TextView press;
@@ -285,8 +285,7 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
                 int hours = seconds / 3600;
                 int minutes = (seconds % 3600) / 60;
                 int secs = seconds % 60;
-                String time = String.format("%d:%02d:%02d",
-                        hours, minutes, secs);
+                String time = String.format("%d:%02d:%02d", hours, minutes, secs);
                 timeView.setText(time);
                 if (running) {
                     seconds++;
