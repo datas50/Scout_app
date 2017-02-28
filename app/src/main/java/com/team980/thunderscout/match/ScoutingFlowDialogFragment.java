@@ -93,6 +93,8 @@ public class ScoutingFlowDialogFragment extends AppCompatDialogFragment {
             }
         });
 
+
+
         builder.setView(dialogView)
                 // Add action buttons
                 .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
@@ -106,6 +108,8 @@ public class ScoutingFlowDialogFragment extends AppCompatDialogFragment {
                         mListener.onDialogNegativeClick(ScoutingFlowDialogFragment.this);
                     }
                 });
+
+
 
         final Dialog dialog = builder.create();
         dialog.setCanceledOnTouchOutside(false);
@@ -126,6 +130,8 @@ public class ScoutingFlowDialogFragment extends AppCompatDialogFragment {
         });
 
         dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+
+
         return dialog;
     }
 

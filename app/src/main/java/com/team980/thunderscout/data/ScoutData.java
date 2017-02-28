@@ -63,7 +63,7 @@ public class ScoutData implements Serializable {
     // SUMMARY
     private String troubleWith;
     private String comments;
-    private boolean pilot;
+    private int pilot;
 
 
     public ScoutData() {
@@ -359,9 +359,9 @@ public class ScoutData implements Serializable {
         this.comments = comments;
     }
 
-    public Boolean getPilot() { return pilot; }
+    public int getPilot() { return pilot; }
 
-    public void setPilot(Boolean comments) {
+    public void setPilot(int pilot) {
         this.pilot = pilot;
     }
 

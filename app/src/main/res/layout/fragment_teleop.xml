@@ -61,11 +61,11 @@
                         android:layout_height="40dp"
                         android:layout_width="120dp" />
 
-                    <TextView
+                    <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/time_view"
-                        android:inputType="" />
+                        android:text="0:00:000"/>
 
 
                 </LinearLayout>

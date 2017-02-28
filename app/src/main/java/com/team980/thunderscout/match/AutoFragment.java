@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.team980.thunderscout.R;
 import com.team980.thunderscout.data.enumeration.FuelDumpAmount;
@@ -58,7 +59,6 @@ public class AutoFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         if (view.getId() == R.id.auto_checkBoxCrossedBaseline) {
             CheckBox checkBox = (CheckBox) view;
-
             scoutingFlowActivity.getData().setCrossedBaseline(checkBox.isChecked());
         } else {
             FuelDumpAmount value = scoutingFlowActivity.getData().getAutoLowGoalDumpAmount();

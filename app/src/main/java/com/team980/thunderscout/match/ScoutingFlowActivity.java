@@ -23,6 +23,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.team980.thunderscout.R;
 import com.team980.thunderscout.bluetooth.ClientConnectionThread;
@@ -101,7 +102,7 @@ public class ScoutingFlowActivity extends AppCompatActivity implements ViewPager
                 getWindow().setStatusBarColor(getResources().getColor(scoutData.getAllianceColor().getColorPrimaryDark()));
             }
         } else {
-            getSupportActionBar().setTitle("Scout a match...");
+            getSupportActionBar().setTitle("Scout a test match...");
         }
     }
 
@@ -184,27 +185,28 @@ public class ScoutingFlowActivity extends AppCompatActivity implements ViewPager
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.fab) {
-            initScoutData();
 
-            Log.d("SCOUTLOOP", "here we go again");
+                    initScoutData();
 
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+                    Log.d("SCOUTLOOP", "here we go again");
 
-            boolean saveToThisDevice = prefs.getBoolean("ms_send_to_local_storage", true);
-            boolean sendToBluetoothServer = prefs.getBoolean("ms_send_to_bt_server", false);
+                    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
-            operationStates = new Bundle();
-            operationStates.putBoolean(OPERATION_SAVE_THIS_DEVICE, saveToThisDevice);
-            operationStates.putBoolean(OPERATION_SEND_BLUETOOTH, sendToBluetoothServer);
+                    boolean saveToThisDevice = prefs.getBoolean("ms_send_to_local_storage", true);
+                    boolean sendToBluetoothServer = prefs.getBoolean("ms_send_to_bt_server", false);
 
-            operationStateDialog = new ProgressDialog(this);
-            operationStateDialog.setIndeterminate(true); //TODO can we use values too?
-            operationStateDialog.setCancelable(false);
-            operationStateDialog.setTitle("Storing data...");
+                    operationStates = new Bundle();
+                    operationStates.putBoolean(OPERATION_SAVE_THIS_DEVICE, saveToThisDevice);
+                    operationStates.putBoolean(OPERATION_SEND_BLUETOOTH, sendToBluetoothServer);
 
-            feedEntry = new FeedEntry(FeedEntry.EntryType.MATCH_SCOUTED, System.currentTimeMillis());
+                    operationStateDialog = new ProgressDialog(this);
+                    operationStateDialog.setIndeterminate(true); //TODO can we use values too?
+                    operationStateDialog.setCancelable(false);
+                    operationStateDialog.setTitle("Storing data...");
 
-            dataOutputLoop();
+                    feedEntry = new FeedEntry(FeedEntry.EntryType.MATCH_SCOUTED, System.currentTimeMillis());
+
+                    dataOutputLoop();
 
             /*if (prefs.getBoolean("ms_send_to_linked_sheet", false)) { //Saving to Sheets
                 SheetsUpdateTask task = new SheetsUpdateTask(getApplicationContext()); //MEMORY LEAK PREVENTION
@@ -213,6 +215,7 @@ public class ScoutingFlowActivity extends AppCompatActivity implements ViewPager
                 Toast info = Toast.makeText(this, "Sending to Google Sheets...", Toast.LENGTH_LONG);
                 info.show();
             }*/
+
         }
 
     }
@@ -254,6 +257,7 @@ public class ScoutingFlowActivity extends AppCompatActivity implements ViewPager
             finish();
         }
     }
+
 
     public ScoutData getData() {
         return scoutData;
@@ -359,6 +363,7 @@ public class ScoutingFlowActivity extends AppCompatActivity implements ViewPager
 
     private void initScoutData() {
         // Init
+
         scoutData.setDateAdded(System.currentTimeMillis());
 
         // Auto
@@ -375,7 +380,7 @@ public class ScoutingFlowActivity extends AppCompatActivity implements ViewPager
         // Teleop
         View teleopView = viewPagerAdapter.getItem(1).getView();
 
-        final TextView timeView = (TextView) teleopView.findViewById(R.id.time_view);
+        final EditText timeView = (EditText) teleopView.findViewById(R.id.time_view);
 
         scoutData.setCollectballssw(timeView.getText().toString()) ;
 

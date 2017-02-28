@@ -212,7 +212,7 @@ public class ScoutDataReadTask extends AsyncTask<Void, ScoutData, Void> {
         int teleopGearsCollectedFloor = cursor.getInt(
                 cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_FLOOR));
 
-        data.setCollectGearsFloor(teleopGearsCollectedFloor););
+        data.setCollectGearsFloor(teleopGearsCollectedFloor);
 
         int teleopGearsScored = cursor.getInt(
                 cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_SCORED));
@@ -241,17 +241,52 @@ public class ScoutDataReadTask extends AsyncTask<Void, ScoutData, Void> {
                 cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_TELEOP_MISSED_HIGH_GOALS));
 
         data.setTeleopMissedHighGoals(teleopMissedHighGoals);
-//TODO figure out how to deal with the radio buttons.
+
         String fd1 = cursor.getString(
                 cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_FUEL_DUMP_1));
 
-        data.getFd1(fd1);
+        data.setFd1(fd1);
+
+        String fd2 = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_FUEL_DUMP_2));
+
+        data.setFd1(fd2);
+
+        String fd3 = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_FUEL_DUMP_3));
+
+        data.setFd1(fd3);
+
+        String fd4 = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_FUEL_DUMP_4));
+
+        data.setFd1(fd4);
+
+        String fd5 = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_FUEL_DUMP_5));
+
+        data.setFd1(fd5);
 
         // to an integer.
         int checkBox = cursor.getInt(
                 cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_ALTER_SHOT));
 
         data.setAltshot(checkBox);
+
+        int checkBox1 = cursor.getInt(
+                cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_BLOCKED_PEG));
+
+        data.setBlockedpeg(checkBox1);
+
+        int checkBox2 = cursor.getInt(
+                cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_PREVENT_CLIMB));
+
+        data.setPreventclimb(checkBox2);
+
+        String other = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_OTHER));
+
+        data.setOther(other);
 
 
         String climbingStats = cursor.getString(
@@ -269,6 +304,12 @@ public class ScoutDataReadTask extends AsyncTask<Void, ScoutData, Void> {
                 cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_COMMENTS));
 
         data.setComments(comments);
+
+        int checkBox3 = cursor.getInt(
+                cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_PILOT));
+
+        data.setPreventclimb(checkBox3);
+
 
         publishProgress(data);
     }
