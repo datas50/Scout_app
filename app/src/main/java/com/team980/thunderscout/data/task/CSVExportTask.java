@@ -50,6 +50,7 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
         // Define a projection that specifies which columns from the database
         // you will actually use after this query.
         String[] projection = {
+                ScoutDataContract.ScoutDataTable._ID,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TEAM_NUMBER,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_MATCH_NUMBER,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_ALLIANCE_COLOR,
@@ -63,12 +64,25 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_AUTO_MISSED_HIGH_GOALS,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_AUTO_CROSSED_BASELINE,
 
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_COLLECT_BALLS_TIME,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_CHUTE,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_FLOOR,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_SCORED,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_DELIVERED,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_LOW_GOAL_DUMPS,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_HIGH_GOALS,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_MISSED_HIGH_GOALS,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_1,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_2,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_3,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_4,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_5,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_ALTER_SHOT,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_PREVENT_CLIMB,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_BLOCKED_PEG,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_OTHER,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_CLIMBING_STATS,
-
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_PILOT,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TROUBLE_WITH,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_COMMENTS
         };
@@ -198,10 +212,34 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
         data.setCrossedBaseline(crossedBaseline != 0); //I2B conversion
 
         // Teleop
+
+        String timeView = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_COLLECT_BALLS_TIME));
+
+        data.setCollectballssw(timeView);
+
+        int teleopGearsCollectedChute = cursor.getInt(
+                cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_CHUTE));
+
+        data.setCollectGearsChute(teleopGearsCollectedChute);
+
+        int teleopGearsCollectedFloor = cursor.getInt(
+                cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_FLOOR));
+
+        data.setCollectGearsFloor(teleopGearsCollectedFloor);
+
+        int teleopGearsScored = cursor.getInt(
+                cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_SCORED));
+
+        data.setTeleopGearsScored(teleopGearsScored);
+
+
         int teleopGearsDelivered = cursor.getInt(
                 cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_DELIVERED));
 
         data.setTeleopGearsDelivered(teleopGearsDelivered);
+
+
 
         byte[] teleopLowGoalDumps = cursor.getBlob(
                 cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_LOW_GOAL_DUMPS));
@@ -218,6 +256,53 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
 
         data.setTeleopMissedHighGoals(teleopMissedHighGoals);
 
+        String fd1 = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_1));
+
+        data.setFd1(fd1);
+
+        String fd2 = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_2));
+
+        data.setFd1(fd2);
+
+        String fd3 = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_3));
+
+        data.setFd1(fd3);
+
+        String fd4 = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_4));
+
+        data.setFd1(fd4);
+
+        String fd5 = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_5));
+
+        data.setFd1(fd5);
+
+        // to an integer.
+        int checkBox = cursor.getInt(
+                cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_ALTER_SHOT));
+
+        data.setAltshot(checkBox);
+
+        int checkBox1 = cursor.getInt(
+                cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_BLOCKED_PEG));
+
+        data.setBlockedpeg(checkBox1);
+
+        int checkBox2 = cursor.getInt(
+                cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_PREVENT_CLIMB));
+
+        data.setPreventclimb(checkBox2);
+
+        String other = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_OTHER));
+
+        data.setOther(other);
+
+
         String climbingStats = cursor.getString(
                 cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_CLIMBING_STATS));
 
@@ -233,6 +318,11 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
                 cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_COMMENTS));
 
         data.setComments(comments);
+
+        int checkBox3 = cursor.getInt(
+                cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_PILOT));
+
+        data.setPreventclimb(checkBox3);
 
         return data;
     }
