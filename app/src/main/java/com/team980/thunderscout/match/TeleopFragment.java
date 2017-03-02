@@ -164,7 +164,9 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
              //   scoutingFlowActivity.getData().setCollectballssw(R.id.collectballstimereturn);
             case R.id.dump1:
                 int id0 = radioGroup0.getCheckedRadioButtonId();
+                Log.d("first_radio_int", "Value " + id0);
                  radioButton0 = (RadioButton) radioGroup0.findViewById(id0);
+                Log.d("first_radio_value", "value " + radioButton0);
                 scoutingFlowActivity.getData().setFd1(radioButton0.getText().toString());
             case R.id.dump2:
                 int id1 = radioGroup1.getCheckedRadioButtonId();

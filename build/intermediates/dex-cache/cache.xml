@@ -3,6 +3,15 @@
 
     <item
         is-multidex="false"
+        jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/3.9/1e0df53c5ef2431f072d1da3fd31bea9da5b529/opencsv-3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="01e0df53c5ef2431f072d1da3fd31bea9da5b529">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/opencsv-3.9_9fbc7847e531ebf6a58b4af38229cbc9fcb92984.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -18,6 +27,24 @@
         revision="25.0.1"
         sha1="d441fc58329c4a4c067acec04ac361627f66ecc8">
         <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/google-http-client-1.22.0_8066c5e926678a4e2149d394c954e0c2b999f574.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-android/1.22.0/6d1e1a76a16a244ab2f41775791be1dd0ec2878a/google-http-client-android-1.22.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6d1e1a76a16a244ab2f41775791be1dd0ec2878a">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/google-http-client-android-1.22.0_ecabc4694c5bb63079e79a58e90f9a3b52e278ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.1_24d59155deac472e2a292eefac56df2cfd2aec2d.jar" />
     </item>
     <item
         is-multidex="false"
@@ -66,6 +93,24 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="76ac1f599d828b0b906908e41974d778bf49825d">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_57f17ab56b9b9388f1ea23864ab76d4ed3893b0b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-jackson2/1.22.0/cc014d64ae11117e159d334c99d9c246d9b36f44/google-http-client-jackson2-1.22.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="cc014d64ae11117e159d334c99d9c246d9b36f44">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/google-http-client-jackson2-1.22.0_2793e59e4324f35e604e466b86ca8f6474ae4ea4.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client/1.22.0/244350c0c845c583717ade13f5666a452fd0cfa/google-api-client-1.22.0.jar"
         jumboMode="true"
         optimize="true"
@@ -75,12 +120,57 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.1_eb40c72bfdbff856f2f1df310c34cee1f30daa8f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.1.1_dbf6055de8f80ec77b3195a9f6dbcf30477fe4bb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.1.1_66db64baef45c64edcd14fbb6bc5dd1887e058c2.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="4ef8ab5fee042023018249474bc93bd4b2b9c17e">
         <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-9.0.0_6cf0c03b170cb9b48d3c3e9b5e14175e87c87c51.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="9cd26c4b6edf954a9957c3286a49ec6d10010f99">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/instant-run_cb325c366f33d9effdc66c7a6e52961839f2f465.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="42df48c7305b08b14fa0e84561091b0c24d70d26">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-9.0.0_cc0204723c8050a8fade72a29fcdc43f904ad0ec.jar" />
     </item>
     <item
         is-multidex="false"
@@ -120,6 +210,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.2/8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5/commons-collections-3.2.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/commons-collections-3.2.2_5beb40822cdf71dae7c610c56580fce9ac653737.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/annedwyer/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
         jumboMode="true"
         optimize="true"
@@ -138,165 +237,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="ea4b54dcbfe5ac05efb0a314105f07258118d3a7">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-9.0.0_2d024a372070872ccb1c8e2176f738a73e8dda78.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.3/c845703de334ddc6b4b3cd26835458cb1cba1f3d/commons-beanutils-1.9.3.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="c845703de334ddc6b4b3cd26835458cb1cba1f3d">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/commons-beanutils-1.9.3_5ea3e7366bd1828a451b3204f13339a051644d4a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/jsr305-1.3.9_063c1e1cc8afc6b5eb3e4074a1acdd0a47b1c4cd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/com.google.guava/guava-jdk5/17.0/463f8378feba44df7ba7cd9272d01837dad62b36/guava-jdk5-17.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="463f8378feba44df7ba7cd9272d01837dad62b36">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/guava-jdk5-17.0_2a69a4cd47fa5d9e112ecff60cd46fe61fc285a3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="9c1c44672010b6847f3744ec3702624d8d16c240">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.android.support-gridlayout-v7-25.1.1_2bcd29043ac40c760a2d32bff6bfba1a7cee218b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.1_fbc4ea45605a5230563c1e07051108a526b76b03.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/3.9/1e0df53c5ef2431f072d1da3fd31bea9da5b529/opencsv-3.9.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="01e0df53c5ef2431f072d1da3fd31bea9da5b529">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/opencsv-3.9_9fbc7847e531ebf6a58b4af38229cbc9fcb92984.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-android/1.22.0/6d1e1a76a16a244ab2f41775791be1dd0ec2878a/google-http-client-android-1.22.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="6d1e1a76a16a244ab2f41775791be1dd0ec2878a">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/google-http-client-android-1.22.0_ecabc4694c5bb63079e79a58e90f9a3b52e278ee.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.1_24d59155deac472e2a292eefac56df2cfd2aec2d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="849010703ef8aa4532051c17fa9eb439b1717036">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_57f17ab56b9b9388f1ea23864ab76d4ed3893b0b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-jackson2/1.22.0/cc014d64ae11117e159d334c99d9c246d9b36f44/google-http-client-jackson2-1.22.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="cc014d64ae11117e159d334c99d9c246d9b36f44">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/google-http-client-jackson2-1.22.0_2793e59e4324f35e604e466b86ca8f6474ae4ea4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.1_eb40c72bfdbff856f2f1df310c34cee1f30daa8f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.1.1_dbf6055de8f80ec77b3195a9f6dbcf30477fe4bb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.1.1_66db64baef45c64edcd14fbb6bc5dd1887e058c2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="cab715958757d26e84c7a44a2040a5e963d39ebf">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/instant-run_cb325c366f33d9effdc66c7a6e52961839f2f465.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="42df48c7305b08b14fa0e84561091b0c24d70d26">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-9.0.0_cc0204723c8050a8fade72a29fcdc43f904ad0ec.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.2/8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5/commons-collections-3.2.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5">
-        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/commons-collections-3.2.2_5beb40822cdf71dae7c610c56580fce9ac653737.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client-android/1.22.0/7a0fe12b7d8189a821934d6f9d6586d00180e461/google-api-client-android-1.22.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="7a0fe12b7d8189a821934d6f9d6586d00180e461">
         <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/google-api-client-android-1.22.0_d3b2d2de8d67520019162848e4f26267c1b2d45f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ea4b54dcbfe5ac05efb0a314105f07258118d3a7">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-9.0.0_2d024a372070872ccb1c8e2176f738a73e8dda78.jar" />
     </item>
     <item
         is-multidex="false"
@@ -327,6 +282,24 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.3/c845703de334ddc6b4b3cd26835458cb1cba1f3d/commons-beanutils-1.9.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c845703de334ddc6b4b3cd26835458cb1cba1f3d">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/commons-beanutils-1.9.3_5ea3e7366bd1828a451b3204f13339a051644d4a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/jsr305-1.3.9_063c1e1cc8afc6b5eb3e4074a1acdd0a47b1c4cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.5/6c6c702c89bfff3cd9e80b04d668c5e190d588c6/commons-lang3-3.5.jar"
         jumboMode="true"
         optimize="true"
@@ -345,12 +318,39 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/annedwyer/.gradle/caches/modules-2/files-2.1/com.google.guava/guava-jdk5/17.0/463f8378feba44df7ba7cd9272d01837dad62b36/guava-jdk5-17.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="463f8378feba44df7ba7cd9272d01837dad62b36">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/guava-jdk5-17.0_2a69a4cd47fa5d9e112ecff60cd46fe61fc285a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="cc178928721f3222b3b06bdfbd9497378ccb9792">
         <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.0.0_508bc5d38b4c2653c7c41e816af079903d107b9a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="9c1c44672010b6847f3744ec3702624d8d16c240">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.android.support-gridlayout-v7-25.1.1_2bcd29043ac40c760a2d32bff6bfba1a7cee218b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.1_fbc4ea45605a5230563c1e07051108a526b76b03.jar" />
     </item>
 
 </items>
