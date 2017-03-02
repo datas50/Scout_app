@@ -67,7 +67,7 @@ public class ScoutDataReadTask extends AsyncTask<Void, ScoutData, Void> {
         // Define a projection that specifies which columns from the database
         // you will actually use after this query.
         String[] projection = {
-                ScoutDataTable._ID,
+                //ScoutDataTable._ID,
                 ScoutDataTable.COLUMN_NAME_TEAM_NUMBER,
                 ScoutDataTable.COLUMN_NAME_MATCH_NUMBER,
                 ScoutDataTable.COLUMN_NAME_ALLIANCE_COLOR,
@@ -81,14 +81,12 @@ public class ScoutDataReadTask extends AsyncTask<Void, ScoutData, Void> {
                 ScoutDataTable.COLUMN_NAME_AUTO_MISSED_HIGH_GOALS,
                 ScoutDataTable.COLUMN_NAME_AUTO_CROSSED_BASELINE,
 
-                ScoutDataTable.COLUMN_NAME_COLLECT_BALLS_TIME,
+
+                ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_DELIVERED,
                 ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_CHUTE,
                 ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_FLOOR,
                 ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_SCORED,
-                ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_DELIVERED,
-                ScoutDataTable.COLUMN_NAME_TELEOP_LOW_GOAL_DUMPS,
-                ScoutDataTable.COLUMN_NAME_TELEOP_HIGH_GOALS,
-                ScoutDataTable.COLUMN_NAME_TELEOP_MISSED_HIGH_GOALS,
+                ScoutDataTable.COLUMN_NAME_COLLECT_BALLS_TIME,
                 ScoutDataTable.COLUMN_NAME_FUEL_DUMP_1,
                 ScoutDataTable.COLUMN_NAME_FUEL_DUMP_2,
                 ScoutDataTable.COLUMN_NAME_FUEL_DUMP_3,
@@ -98,6 +96,9 @@ public class ScoutDataReadTask extends AsyncTask<Void, ScoutData, Void> {
                 ScoutDataTable.COLUMN_NAME_PREVENT_CLIMB,
                 ScoutDataTable.COLUMN_NAME_BLOCKED_PEG,
                 ScoutDataTable.COLUMN_NAME_OTHER,
+                ScoutDataTable.COLUMN_NAME_TELEOP_LOW_GOAL_DUMPS,
+                ScoutDataTable.COLUMN_NAME_TELEOP_HIGH_GOALS,
+                ScoutDataTable.COLUMN_NAME_TELEOP_MISSED_HIGH_GOALS,
                 ScoutDataTable.COLUMN_NAME_CLIMBING_STATS,
                 ScoutDataTable.COLUMN_NAME_PILOT,
                 ScoutDataTable.COLUMN_NAME_TROUBLE_WITH,
