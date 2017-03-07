@@ -8,7 +8,7 @@ import static com.team980.thunderscout.data.ScoutDataContract.ScoutDataTable;
 
 public class ScoutDataDbHelper extends SQLiteOpenHelper {
     // If you change the database schema, you must increment the database version.
-    public static final int DATABASE_VERSION = 3;
+    public static final int DATABASE_VERSION = 4;
 
     public static final String DATABASE_NAME = "ThunderScout_SCOUT_DATA_2017.db"; //Store year in database name but DO NOT CHANGE FORMAT
 
@@ -28,11 +28,14 @@ public class ScoutDataDbHelper extends SQLiteOpenHelper {
                     ScoutDataTable.COLUMN_NAME_DATA_SOURCE + TEXT_TYPE + COMMA_SEP +
 
                     ScoutDataTable.COLUMN_NAME_AUTO_GEARS_DELIVERED + INTEGER_TYPE + COMMA_SEP +
+                    ScoutDataTable.COLUMN_NAME_AUTO_LOW_GOAL_DUMP_AMOUNT + TEXT_TYPE + COMMA_SEP +
+                    ScoutDataTable.COLUMN_NAME_AUTO_HIGH_GOALS + INTEGER_TYPE + COMMA_SEP +
+                    ScoutDataTable.COLUMN_NAME_AUTO_MISSED_HIGH_GOALS + INTEGER_TYPE + COMMA_SEP +
+                    ScoutDataTable.COLUMN_NAME_AUTO_CROSSED_BASELINE + INTEGER_TYPE + COMMA_SEP +
+
+                    ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_DELIVERED + INTEGER_TYPE + COMMA_SEP +
                     ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_CHUTE + INTEGER_TYPE + COMMA_SEP +
                     ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_FLOOR + INTEGER_TYPE + COMMA_SEP +
-
-
-
                     ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_SCORED + INTEGER_TYPE + COMMA_SEP +
                     ScoutDataTable.COLUMN_NAME_COLLECT_BALLS_TIME + INTEGER_TYPE + COMMA_SEP +
                     ScoutDataTable.COLUMN_NAME_FUEL_DUMP_1 + TEXT_TYPE + COMMA_SEP +
@@ -44,15 +47,6 @@ public class ScoutDataDbHelper extends SQLiteOpenHelper {
                     ScoutDataTable.COLUMN_NAME_PREVENT_CLIMB + INTEGER_TYPE + COMMA_SEP +
                     ScoutDataTable.COLUMN_NAME_BLOCKED_PEG + INTEGER_TYPE + COMMA_SEP +
                     ScoutDataTable.COLUMN_NAME_OTHER + TEXT_TYPE + COMMA_SEP +
-
-
-
-                    ScoutDataTable.COLUMN_NAME_AUTO_LOW_GOAL_DUMP_AMOUNT + TEXT_TYPE + COMMA_SEP +
-                    ScoutDataTable.COLUMN_NAME_AUTO_HIGH_GOALS + INTEGER_TYPE + COMMA_SEP +
-                    ScoutDataTable.COLUMN_NAME_AUTO_MISSED_HIGH_GOALS + INTEGER_TYPE + COMMA_SEP +
-                    ScoutDataTable.COLUMN_NAME_AUTO_CROSSED_BASELINE + INTEGER_TYPE + COMMA_SEP +
-
-                    ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_DELIVERED + INTEGER_TYPE + COMMA_SEP +
                     ScoutDataTable.COLUMN_NAME_TELEOP_LOW_GOAL_DUMPS + BLOB_TYPE + COMMA_SEP +
                     ScoutDataTable.COLUMN_NAME_TELEOP_HIGH_GOALS + INTEGER_TYPE + COMMA_SEP +
                     ScoutDataTable.COLUMN_NAME_TELEOP_MISSED_HIGH_GOALS + INTEGER_TYPE + COMMA_SEP +

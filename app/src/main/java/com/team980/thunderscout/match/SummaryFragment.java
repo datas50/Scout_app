@@ -29,15 +29,16 @@ public class SummaryFragment extends Fragment implements View.OnClickListener{
     }
 
     public void onClick(View v){
-        CheckBox checkBox3 = (CheckBox) v;
-        if(checkBox3.isChecked()){
-            int m = 1;
-        }else{
-            int m = 0;
+        if(v.getId() == R.id.pilot) {
+            CheckBox checkBox3 = (CheckBox) v;
+            if (checkBox3.isChecked()) {
+                m = 1;
+            } else {
+                m = 0;
+            }
+
+            scoutingFlowActivity.getData().setPilot(m);
         }
-
-        scoutingFlowActivity.getData().setPilot(m);
-
     }
 
     @Override

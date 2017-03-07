@@ -92,10 +92,10 @@ public class ScoutData implements Serializable {
         setCrossedBaseline(other.hasCrossedBaseline());
 
         //Teleop
+        setTeleopGearsDelivered(other.getTeleopGearsDelivered());
         setCollectGearsChute(other.getCollectGearsChute());
         setCollectGearsFloor(other.getCollectGearsFloor());
         setTeleopGearsScored(other.getTeleopGearsScored());
-        setTeleopGearsDelivered(other.getTeleopGearsDelivered());
         setCollectballssw(other.getCollectballssw());
         setFd1(other.getFd1());
         setFd2(other.getFd2());
@@ -382,10 +382,31 @@ public class ScoutData implements Serializable {
         fieldList.add(getAutoLowGoalDumpAmount().name());
         fieldList.add(String.valueOf(getAutoHighGoals()));
         fieldList.add(String.valueOf(getAutoMissedHighGoals()));
-        fieldList.add(String.valueOf(hasCrossedBaseline()));
+        if (hasCrossedBaseline())
+        {
+            fieldList.add("1");
+        }
+        else
+        {
+            fieldList.add("0");
+        }
+
 
         //Teleop
         fieldList.add(String.valueOf(getTeleopGearsDelivered()));
+        fieldList.add(String.valueOf(getCollectGearsChute()));
+        fieldList.add(String.valueOf(getCollectGearsFloor()));
+        fieldList.add(String.valueOf(getTeleopGearsScored()));
+        fieldList.add(String.valueOf(getCollectballssw()));
+        fieldList.add(String.valueOf(getFd1()));
+        fieldList.add(String.valueOf(getFd2()));
+        fieldList.add(String.valueOf(getFd3()));
+        fieldList.add(String.valueOf(getFd4()));
+        fieldList.add(String.valueOf(getFd5()));
+        fieldList.add(String.valueOf(getAltshot()));
+        fieldList.add(String.valueOf(getPreventclimb()));
+        fieldList.add(String.valueOf(getBlockedpeg()));
+        fieldList.add(String.valueOf(getOther()));
         fieldList.add(getTeleopLowGoalDumps().toString());
         fieldList.add(String.valueOf(getTeleopHighGoals()));
         fieldList.add(String.valueOf(getTeleopMissedHighGoals()));
@@ -394,6 +415,7 @@ public class ScoutData implements Serializable {
         //Summary
         fieldList.add(getTroubleWith());
         fieldList.add(getComments());
+        fieldList.add(String.valueOf(getPilot()));
 
         return (String[]) fieldList.toArray(new String[fieldList.size()]);
     }

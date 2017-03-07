@@ -50,7 +50,7 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
         // Define a projection that specifies which columns from the database
         // you will actually use after this query.
         String[] projection = {
-                ScoutDataContract.ScoutDataTable._ID,
+                //ScoutDataContract.ScoutDataTable._ID,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TEAM_NUMBER,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_MATCH_NUMBER,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_ALLIANCE_COLOR,
@@ -64,14 +64,11 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_AUTO_MISSED_HIGH_GOALS,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_AUTO_CROSSED_BASELINE,
 
-                ScoutDataContract.ScoutDataTable.COLUMN_NAME_COLLECT_BALLS_TIME,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_DELIVERED,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_CHUTE,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_COLLECT_GEARS_FLOOR,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_SCORED,
-                ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_DELIVERED,
-                ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_LOW_GOAL_DUMPS,
-                ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_HIGH_GOALS,
-                ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_MISSED_HIGH_GOALS,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_COLLECT_BALLS_TIME,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_1,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_2,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_FUEL_DUMP_3,
@@ -81,10 +78,14 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_PREVENT_CLIMB,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_BLOCKED_PEG,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_OTHER,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_LOW_GOAL_DUMPS,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_HIGH_GOALS,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_MISSED_HIGH_GOALS,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_CLIMBING_STATS,
-                ScoutDataContract.ScoutDataTable.COLUMN_NAME_PILOT,
+
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TROUBLE_WITH,
-                ScoutDataContract.ScoutDataTable.COLUMN_NAME_COMMENTS
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_COMMENTS,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_PILOT
         };
 
         // How you want the results sorted in the resulting Cursor
@@ -111,6 +112,11 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
         CSVWriter writer;
 
         File dir = new File(Environment.getExternalStorageDirectory(), "ThunderScout");
+        /*
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+        */
         dir.mkdir();
 
         File csv = new File(dir, "EXPORTED_" + System.currentTimeMillis() + ".csv");
@@ -322,7 +328,7 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
         int checkBox3 = cursor.getInt(
                 cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_PILOT));
 
-        data.setPreventclimb(checkBox3);
+        data.setPilot(checkBox3);
 
         return data;
     }
@@ -345,7 +351,7 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
         intent.setAction(android.content.Intent.ACTION_VIEW);
         intent.setDataAndType(FileProvider.getUriForFile(context, "com.team980.thunderscout.provider", file), mime);
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        ((Activity) context).startActivityForResult(intent, 0); //shh.. this works, I guess?
+        //((Activity) context).startActivityForResult(intent, 0); //shh.. this works, I guess?
 
         super.onPostExecute(file);
     }
