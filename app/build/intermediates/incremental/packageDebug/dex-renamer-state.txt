@@ -1,7 +1,4 @@
-#Thu Mar 02 17:41:00 EST 2017
-base.0=/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_57f17ab56b9b9388f1ea23864ab76d4ed3893b0b
-renamed.1=classes2.dex
+#Mon Mar 06 20:02:42 EST 2017
+base.0=/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
-file.1=/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_cb325c366f33d9effdc66c7a6e52961839f2f465/classes.dex
-base.1=/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_cb325c366f33d9effdc66c7a6e52961839f2f465
-file.0=/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_57f17ab56b9b9388f1ea23864ab76d4ed3893b0b/classes.dex
+file.0=/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

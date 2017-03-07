@@ -82,9 +82,10 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_HIGH_GOALS,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_MISSED_HIGH_GOALS,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_CLIMBING_STATS,
-                ScoutDataContract.ScoutDataTable.COLUMN_NAME_PILOT,
+
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TROUBLE_WITH,
-                ScoutDataContract.ScoutDataTable.COLUMN_NAME_COMMENTS
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_COMMENTS,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_PILOT
         };
 
         // How you want the results sorted in the resulting Cursor
@@ -327,7 +328,7 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
         int checkBox3 = cursor.getInt(
                 cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_PILOT));
 
-        data.setPreventclimb(checkBox3);
+        data.setPilot(checkBox3);
 
         return data;
     }

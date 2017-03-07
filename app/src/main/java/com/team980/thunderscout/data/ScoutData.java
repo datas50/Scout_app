@@ -382,7 +382,15 @@ public class ScoutData implements Serializable {
         fieldList.add(getAutoLowGoalDumpAmount().name());
         fieldList.add(String.valueOf(getAutoHighGoals()));
         fieldList.add(String.valueOf(getAutoMissedHighGoals()));
-        fieldList.add(String.valueOf(hasCrossedBaseline()));
+        if (hasCrossedBaseline())
+        {
+            fieldList.add("1");
+        }
+        else
+        {
+            fieldList.add("0");
+        }
+
 
         //Teleop
         fieldList.add(String.valueOf(getTeleopGearsDelivered()));

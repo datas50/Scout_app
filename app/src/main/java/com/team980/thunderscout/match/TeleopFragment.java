@@ -180,27 +180,27 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
             case R.id.cbalteredshot:
                 CheckBox checkBox = (CheckBox) v;
                 if(checkBox.isChecked()){
-                    int i = 1;
+                    i = 1;
                 }else{
-                    int i = 0;
+                    i = 0;
                 }
 
                 scoutingFlowActivity.getData().setAltshot(i);
             case R.id.cbblockedpeg:
                 CheckBox checkBox1 = (CheckBox) v;
                 if(checkBox1.isChecked()){
-                    int j = 1;
+                    j = 1;
                 }else{
-                    int j = 0;
+                    j = 0;
                 }
 
                 scoutingFlowActivity.getData().setBlockedpeg(j);
             case R.id.cbpreventedclimb:
                 CheckBox checkBox2 = (CheckBox) v;
                 if(checkBox2.isChecked()){
-                    int k = 1;
+                    k = 1;
                 }else{
-                    int k = 0;
+                    k = 0;
                 }
                 scoutingFlowActivity.getData().setPreventclimb(k);
                 //case R.id.collectballstimereturn:
