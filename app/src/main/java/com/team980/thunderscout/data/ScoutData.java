@@ -1,5 +1,6 @@
 package com.team980.thunderscout.data;
 
+import com.team980.thunderscout.R;
 import com.team980.thunderscout.data.enumeration.AllianceColor;
 import com.team980.thunderscout.data.enumeration.ClimbingStats;
 import com.team980.thunderscout.data.enumeration.FuelDumpAmount;
@@ -398,6 +399,8 @@ public class ScoutData implements Serializable {
         //Auto
         fieldList.add(String.valueOf(getPilot()));
         fieldList.add(getAutoLowGoalDumpAmount().name());
+
+
         fieldList.add(String.valueOf(getFd2()));
         if (hasCrossedBaseline())
         {

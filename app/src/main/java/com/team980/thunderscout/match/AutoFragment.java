@@ -23,7 +23,7 @@ public class AutoFragment extends Fragment implements View.OnClickListener, andr
 
     ScoutingFlowActivity scoutingFlowActivity;
     private int m = 0; int del = 0; int drop = 0;
-    private RadioGroup lowgoalgroup;
+    private RadioGroup highgoalgroup;
 
 
     @Override
@@ -43,8 +43,8 @@ public class AutoFragment extends Fragment implements View.OnClickListener, andr
         checkBoxdel.setOnClickListener(this);
         CheckBox checkBoxdrop = (CheckBox) view.findViewById(R.id.AutoDroppedGears);
         checkBoxdrop.setOnClickListener(this);
-        lowgoalgroup = (RadioGroup) view.findViewById(R.id.autohigh);
-        lowgoalgroup.setOnCheckedChangeListener(this);
+        highgoalgroup = (RadioGroup) view.findViewById(R.id.autohigh);
+        highgoalgroup.setOnCheckedChangeListener(this);
         //lowgoalgroup.setOnClickListener(this);
 
 
@@ -71,24 +71,24 @@ public class AutoFragment extends Fragment implements View.OnClickListener, andr
         super.onDetach();
     }
 
-    public void onCheckedChanged(RadioGroup lowgoalgroup, int checkedId) {
+    public void onCheckedChanged(RadioGroup highgoalgroup, int checkedId1) {
         // checkedId is the RadioButton selected
 
-        switch(checkedId) {
+        switch(checkedId1) {
             case R.id.high0:
-                scoutingFlowActivity.getData().setFd1("0");
+                scoutingFlowActivity.getData().setFd2("0");
                 break;
             case R.id.high1:
-                scoutingFlowActivity.getData().setFd1("5");
+                scoutingFlowActivity.getData().setFd2("5");
                 break;
             case R.id.high2:
-                scoutingFlowActivity.getData().setFd1("15");
+                scoutingFlowActivity.getData().setFd2("15");
                 break;
             case R.id.high3:
-                scoutingFlowActivity.getData().setFd1("25");
+                scoutingFlowActivity.getData().setFd2("25");
                 break;
             case R.id.high4:
-                scoutingFlowActivity.getData().setFd1("35");
+                scoutingFlowActivity.getData().setFd2("35");
                 break;
         }
     }
