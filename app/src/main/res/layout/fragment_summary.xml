@@ -11,14 +11,6 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <CheckBox
-            android:text="Team's pilot is on airshift"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:id="@+id/pilot" />
-
-
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,22 +28,6 @@
             android:layout_marginLeft="5dp"
             android:entries="@array/climbing_stats_array" />
 
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginRight="5dp"
-            android:text="Shoot High Accuracy"
-            android:textSize="18sp" />
-
-        <Spinner
-            android:id="@+id/shoot_high_accuracy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:dropDownWidth="wrap_content"
-            android:spinnerMode="dropdown" />
 
         <LinearLayout
             android:layout_width="wrap_content"

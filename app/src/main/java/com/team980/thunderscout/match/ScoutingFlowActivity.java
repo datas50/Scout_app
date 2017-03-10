@@ -369,24 +369,18 @@ public class ScoutingFlowActivity extends AppCompatActivity implements ViewPager
         // Auto
         View autoView = viewPagerAdapter.getItem(0).getView();
 
-        CounterCompoundView autoHighGoals = (CounterCompoundView) autoView.findViewById(R.id.auto_counterHighGoals);
 
-        scoutData.setAutoHighGoals((int) autoHighGoals.getValue());
-
-        CounterCompoundView autoMissedHighGoals = (CounterCompoundView) autoView.findViewById(R.id.auto_counterMissedHighGoals);
-
-        scoutData.setAutoMissedHighGoals((int) autoMissedHighGoals.getValue());
 
         // Teleop
         View teleopView = viewPagerAdapter.getItem(1).getView();
 
-        final EditText timeView = (EditText) teleopView.findViewById(R.id.time_view);
+        final TextView timeView3 = (TextView) teleopView.findViewById(R.id.climbtimereturn);
 
-        scoutData.setCollectballssw(timeView.getText().toString()) ;
+        scoutData.setClimbtimer(timeView3.getText().toString()); ;
 
-        EditText otherdef = (EditText) teleopView.findViewById(R.id.other);
+        EditText other = (EditText) teleopView.findViewById(R.id.other);
 
-        scoutData.setOther(otherdef.getText().toString());
+        scoutData.setOther(other.getText().toString());
 
         CounterCompoundView teleopGearsDelivered = (CounterCompoundView) teleopView.findViewById(R.id.teleop_counterDeliverGears);
 
@@ -403,6 +397,24 @@ public class ScoutingFlowActivity extends AppCompatActivity implements ViewPager
         CounterCompoundView teleopGearsScored = (CounterCompoundView) teleopView.findViewById(R.id.teleop_counterScoreGears);
 
         scoutData.setTeleopGearsScored((int) teleopGearsScored.getValue());
+
+        CounterCompoundView teleopgearsdropped = (CounterCompoundView) teleopView.findViewById(R.id.teleop_counterDropGears);
+
+        scoutData.setTeleopGearsDropped((int) teleopgearsdropped.getValue());
+
+        EditText shootAcc = (EditText) teleopView.findViewById(R.id.percent);
+
+        scoutData.setShootingAccuracy(shootAcc.getText().toString());
+
+        CounterCompoundView highCycles = (CounterCompoundView) teleopView.findViewById(R.id.teleop_counterShootHighCycles);
+
+        scoutData.setShootingCycles((int) highCycles.getValue());
+
+        CounterCompoundView dumpCycles = (CounterCompoundView) teleopView.findViewById(R.id.teleop_counterLowDumpCycles);
+
+        scoutData.setLowDumpCycles((int) dumpCycles.getValue());
+
+
 
         scoutData.getTeleopLowGoalDumps().addAll(((TeleopFragment) viewPagerAdapter.getItem(1)).getFuelDumpAdapter().get());
 

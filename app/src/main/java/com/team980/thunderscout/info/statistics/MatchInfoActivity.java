@@ -65,10 +65,10 @@ public class MatchInfoActivity extends AppCompatActivity {
                 data.getAutoLowGoalDumpAmount().getMaximumAmount() + ")");
 
         TextView autoHighGoals = (TextView) findViewById(R.id.info_match_autoHighGoals);
-        autoHighGoals.setText(data.getAutoHighGoals() + "");
+        autoHighGoals.setText(data.getTeleopHighGoals() + "");
 
         TextView autoMissedGoals = (TextView) findViewById(R.id.info_match_autoMissedHighGoals);
-        autoMissedGoals.setText(data.getAutoMissedHighGoals() + "");
+        autoMissedGoals.setText(data.getTeleopHighGoals() + "");
 
         TextView crossedBaseline = (TextView) findViewById(R.id.info_match_autoCrossedBaseline);
         TextView crossedBaselineAction = (TextView) findViewById(R.id.info_match_autoCrossedBaselineAction);
@@ -97,10 +97,10 @@ public class MatchInfoActivity extends AppCompatActivity {
         listFuelDumps.setAdapter(listDumpsAdapter);
 
         TextView teleopHighGoals = (TextView) findViewById(R.id.info_match_teleopHighGoals);
-        teleopHighGoals.setText(data.getAutoHighGoals() + "");
+        teleopHighGoals.setText(data.getTeleopHighGoals() + "");
 
         TextView teleopMissedGoals = (TextView) findViewById(R.id.info_match_teleopMissedHighGoals);
-        teleopMissedGoals.setText(data.getAutoMissedHighGoals() + "");
+        teleopMissedGoals.setText(data.getTeleopHighGoals() + "");
 
         TextView climbingStats = (TextView) findViewById(R.id.info_match_teleopClimbingStats);
         TextView climbingStatsAction = (TextView) findViewById(R.id.info_match_teleopClimbingStatsAction);

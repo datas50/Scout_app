@@ -61,7 +61,7 @@ public class AverageScoutData implements Serializable {
     public float getAverageAutoHighGoals() {
         float i = 0;
         for (ScoutData data : dataList) {
-            i += data.getAutoHighGoals();
+            i += data.getTeleopHighGoals();
         }
 
         return i / dataList.size();
@@ -70,7 +70,7 @@ public class AverageScoutData implements Serializable {
     public float getAverageAutoMissedHighGoals() {
         float i = 0;
         for (ScoutData data : dataList) {
-            i += data.getAutoMissedHighGoals();
+            i += data.getTeleopHighGoals();
         }
 
         return i / dataList.size();

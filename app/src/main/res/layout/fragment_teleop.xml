@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:isScrollContainer="true"
         android:orientation="vertical"
-        android:padding="20dp"
+        android:padding="10dp"
         android:scrollbars="vertical">
 
         <LinearLayout
@@ -25,172 +25,46 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <TextView
-                    android:text="Actions"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/actions"
-                    android:layout_gravity="center"
-                    android:textSize="24sp" />
-
-                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="5dp"
-                        android:text="Collect Balls"
-                        android:textSize="18sp"/>
-                    <Button
-                        android:id="@+id/startcollect"
-                        android:text="Start"
-                        android:layout_height="40dp"
-                        android:layout_width="120dp" />
-
-                    <Button
-                        android:id="@+id/pausecollect"
-                        android:text="Pause"
-                        android:layout_height="40dp"
-                        android:layout_width="120dp" />
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/time_view"
-                        android:text="0:00:000"/>
-
-
-                </LinearLayout>
-
-                <LinearLayout
+                    android:layout_marginRight="5dp"
+                    android:text="Climb"
+                    android:textSize="18sp"/>
+                <Button
+                    android:id="@+id/startClimb"
+                    android:text="Start"
+                    android:layout_width="200dp"
+                    android:layout_height="120dp"
+                    android:background="#6ca88a" />
+                <Button
+                    android:id="@+id/pauseClimb"
+                    android:text="Pause"
+                    android:layout_width="200dp"
+                    android:layout_height="120dp"
+                    android:background="#e55858" />
+                <TextView
+                    android:text ="0:00:000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="5dp"
-                        android:text="Shoots High"
-                        android:textSize="18sp"/>
-                    <Button
-                        android:id="@+id/startShootHigh"
-                        android:text="Start"
-                        android:layout_height="40dp"
-                        android:layout_width="120dp" />
-                    <Button
-                        android:id="@+id/pauseShootHigh"
-                        android:text="Pause"
-                        android:layout_height="40dp"
-                        android:layout_width="120dp" />
-                    <EditText
-                        android:text="0:00:000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/shoothightimereturn" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="5dp"
-                        android:text="        Defense"
-                        android:textSize="18sp"/>
-                    <Button
-                        android:id="@+id/startDefense"
-                        android:text="Start"
-                        android:layout_height="40dp"
-                        android:layout_width="120dp" />
-                    <Button
-                        android:id="@+id/pauseDefense"
-                        android:text="Pause"
-                        android:layout_height="40dp"
-                        android:layout_width="120dp" />
-                    <EditText
-                        android:text="0:00:000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/defensetimereturn" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="5dp"
-                        android:text="            Climb"
-                        android:textSize="18sp"/>
-                    <Button
-                        android:id="@+id/startClimb"
-                        android:text="Start"
-                        android:layout_height="40dp"
-                        android:layout_width="120dp" />
-                    <Button
-                        android:id="@+id/pauseClimb"
-                        android:text="Pause"
-                        android:layout_height="40dp"
-                        android:layout_width="120dp" />
-                    <EditText
-                        android:text ="0:00:000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/climbtimereturn" />
-
-                </LinearLayout>
+                    android:id="@+id/climbtimereturn" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="High Goals Made"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="100dp"/>
-
-                <com.team980.thunderscout.util.CounterCompoundView
-                    android:id="@+id/teleop_counterHighGoalAction"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="76dp"
-                    android:textSize="18sp"
-                    android:layout_gravity="center">
-                </com.team980.thunderscout.util.CounterCompoundView>
-
             </LinearLayout>
+
             <Space
                 android:layout_width="100dp"
-                android:layout_height="100dp"/>
+                android:layout_height="60dp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -268,11 +142,8 @@
                             android:layout_gravity="center">
                         </com.team980.thunderscout.util.CounterCompoundView>
                     </LinearLayout>
-
-
-
-
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -298,15 +169,15 @@
                         <com.team980.thunderscout.util.CounterCompoundView
                             android:id="@+id/teleop_counterDeliverGears"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="42dp"
                             android:layout_marginLeft="5dp"
                             android:textSize="18sp"
                             android:layout_weight="7.85"
                             android:layout_gravity="center">
                         </com.team980.thunderscout.util.CounterCompoundView>
                     </LinearLayout>
-
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -332,10 +203,43 @@
                         <com.team980.thunderscout.util.CounterCompoundView
                             android:id="@+id/teleop_counterScoreGears"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
                             android:textSize="18sp"
-                            android:layout_weight="7.85"
+                            android:layout_gravity="center"
+                            android:layout_height="42dp">
+                        </com.team980.thunderscout.util.CounterCompoundView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:text="Drop Gears"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.team980.thunderscout.util.CounterCompoundView
+                            android:id="@+id/teleop_counterDropGears"
+                            android:layout_width="wrap_content"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="18sp"
                             android:layout_gravity="center">
                         </com.team980.thunderscout.util.CounterCompoundView>
                     </LinearLayout>
@@ -346,244 +250,264 @@
 
         </LinearLayout>
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="horizontal">
 
+
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:orientation="horizontal">
 
-                <RadioGroup
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/dump1"
-                    android:text="radio buttons"
-                    android:checkedButton="@+id/dump1rb4">
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
 
-                    <RadioButton
-                        android:text="0"
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/dump1rb0"
-                        android:layout_weight="1" />
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:text="Fuel Carrying Capacity"
+                        android:textSize="18sp" />
 
-                    <RadioButton
-                        android:text="1-15"
+                    <RadioGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/dump1rb1"
-                        android:layout_weight="1" />
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:id="@+id/dump1"
+                        android:checkedButton="@+id/dump1rb0">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/dump1rb0"
+                            android:text="N/A"/>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/dump1rb1"
+                            android:text="0-9"/>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/dump1rb2"
+                            android:text="10-19"/>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/dump1rb3"
+                            android:text="20-29"/>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/dump1rb4"
+                            android:text="30+"/>
+                    </RadioGroup>
 
-                    <RadioButton
-                        android:text="16-30"
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/dump1rb2"
-                        android:layout_weight="1" />
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:text="Shooting Accuracy"
+                        android:textSize="18sp" />
 
-                    <RadioButton
-                        android:text="31-45"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/dump1rb3"
-                        android:layout_weight="1" />
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
 
-                    <RadioButton
-                        android:text="none"
+                        <EditText
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:hint="0"
+                            android:textSize="24sp"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:id="@+id/percent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:text="%"/>
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/dump1rb4"
-                        android:layout_weight="1" />
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
 
-                </RadioGroup>
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump2"
-                    android:text="radio buttons"
-                    android:checkedButton="@+id/dump2rb4">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
 
-                    <RadioButton
-                        android:text="0"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump2rb0"
-                        android:layout_weight="1" />
+                        </LinearLayout>
+                    </LinearLayout>
 
-                    <RadioButton
-                        android:text="1-15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump2rb1"
-                        android:layout_weight="1" />
 
-                    <RadioButton
-                        android:text="16-30"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump2rb2"
-                        android:layout_weight="1" />
 
-                    <RadioButton
-                        android:text="31-45"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump2rb3"
-                        android:layout_weight="1" />
 
-                    <RadioButton
-                        android:text="none"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump2rb4"
-                        android:layout_weight="1" />
-
-                </RadioGroup>
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump3"
-                    android:text="radio buttons"
-                    android:checkedButton="@+id/dump3rb4">
-
-                    <RadioButton
-                        android:text="0"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump3rb0"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="1-15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump3rb1"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="16-30"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump3rb2"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="31-45"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump3rb3"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="none"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump3rb4"
-                        android:layout_weight="1" />
-
-                </RadioGroup>
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump4"
-                    android:text="radio buttons"
-                    android:checkedButton="@+id/dump4rb4">
-
-                    <RadioButton
-                        android:text="0"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump4rb0"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="1-15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump4rb1"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="16-30"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump4rb2"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="31-45"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump4rb3"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="none"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump4rb4"
-                        android:layout_weight="1" />
-
-                </RadioGroup>
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dump5"
-                    android:text="radio buttons"
-                    android:checkedButton="@+id/dump5rb4">
-
-                    <RadioButton
-                        android:text="0"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump5rb0"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="1-15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump5rb1"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="16-30"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump5rb2"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="31-45"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump5rb3"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:text="none"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/dump5rb4"
-                        android:layout_weight="1" />
-
-                </RadioGroup>
+                </LinearLayout>
 
             </LinearLayout>
-
-            <Space
-                android:layout_width="100dp"
-                android:layout_height="100dp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:text="Shooting Cycles"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.team980.thunderscout.util.CounterCompoundView
+                            android:id="@+id/teleop_counterShootHighCycles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="18sp"
+                            android:layout_weight="7.85"
+                            android:layout_gravity="center">
+                        </com.team980.thunderscout.util.CounterCompoundView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:text="Low Dump Cycles"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.team980.thunderscout.util.CounterCompoundView
+                            android:id="@+id/teleop_counterLowDumpCycles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="18sp"
+                            android:layout_weight="7.85"
+                            android:layout_gravity="center">
+                        </com.team980.thunderscout.util.CounterCompoundView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <Space
+                android:layout_width="100dp"
+                android:layout_height="60dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Defense Options"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/DefenseOptions"
+                    android:layout_gravity="center"
+                    android:textSize="24sp" />
 
                 <CheckBox
                     android:id="@+id/cbalteredshot"
@@ -620,6 +544,10 @@
             </LinearLayout>
 
         </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
 
         <LinearLayout
             android:layout_width="match_parent"

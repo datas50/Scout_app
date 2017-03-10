@@ -28,12 +28,12 @@
         "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/generated/res/pngs/debug/drawable-hdpi/ic_info_white_24dp.png"
     },
     {
-        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_expand_more_white_24dp.png",
-        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/generated/res/pngs/debug/drawable-hdpi/ic_expand_more_white_24dp.png"
-    },
-    {
         "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_bluetooth_disabled_white_24dp.png",
         "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/generated/res/pngs/debug/drawable-hdpi/ic_bluetooth_disabled_white_24dp.png"
+    },
+    {
+        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_expand_more_white_24dp.png",
+        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/generated/res/pngs/debug/drawable-hdpi/ic_expand_more_white_24dp.png"
     },
     {
         "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_assignment_white_24dp.png",

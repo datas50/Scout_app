@@ -4,12 +4,12 @@
         "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_create_white_24dp.png"
     },
     {
-        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_settings_white_24dp.png",
-        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_settings_white_24dp.png"
-    },
-    {
         "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_info_white_24dp.png",
         "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_info_white_24dp.png"
+    },
+    {
+        "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_settings_white_24dp.png",
+        "source": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_settings_white_24dp.png"
     },
     {
         "merged": "/Users/annedwyer/AndroidStudioProjects/scout_app/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_send_white_24dp.png",

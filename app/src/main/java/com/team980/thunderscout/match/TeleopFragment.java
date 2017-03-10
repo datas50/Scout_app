@@ -20,13 +20,14 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.RadioGroup;
 import android.widget.RadioButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 
 
 import com.team980.thunderscout.R;
 import com.team980.thunderscout.data.enumeration.ClimbingStats;
 import com.team980.thunderscout.data.enumeration.FuelDumpAmount;
 
-public class TeleopFragment extends Fragment implements View.OnClickListener, Spinner.OnItemSelectedListener {
+public class TeleopFragment extends Fragment implements View.OnClickListener, Spinner.OnItemSelectedListener, android.widget.RadioGroup.OnCheckedChangeListener{
 
     private ScoutingFlowActivity scoutingFlowActivity;
 
@@ -35,12 +36,12 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
     private EditText timeView;
     private EditText timeView1;
     private EditText timeView2;
-    private EditText timeView3;
+    private TextView timeView3;
     Handler customHandler = new Handler();
     private Integer presses=0;
     private TextView press;
-    private RadioGroup radioGroup0, radioGroup1, radioGroup2, radioGroup3, radioGroup4;
-    private RadioButton radioButton0, radioButton1, radioButton2, radioButton3, radioButton4;
+    private RadioGroup radioGroup0;
+    private RadioButton radioButton0;
 
 
     private int seconds = 0;
@@ -51,7 +52,7 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
     // [0: collect, 1: shoot high]
     private boolean running[] = {false, false, false, false};
     private boolean wasRunning[] = {false, false, false, false};
-    private Integer i=0, j = 0, k = 0;
+    private int i=0, j = 0, k = 0;
 
     long startTime=0L,timeInMilliseconds=0L,timeSwapBuff=0L,updateTime=0L;
 
@@ -61,11 +62,11 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
 
 
         View layout = inflater.inflate(R.layout.fragment_teleop, container, false);
-        runTimer(layout);
-        runTimer2(layout);
-        runTimer3(layout);
+        //runTimer(layout);
+        //runTimer2(layout);
+        //runTimer3(layout);
         runTimer4(layout);
-        Button startButton = (Button) layout.findViewById(R.id.startcollect);
+        /*Button startButton = (Button) layout.findViewById(R.id.startcollect);
         startButton.setOnClickListener(this);
         Button stopButton = (Button) layout.findViewById(R.id.pausecollect);
         stopButton.setOnClickListener(this);
@@ -76,7 +77,7 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
         Button startDefense = (Button) layout.findViewById(R.id.startDefense);
         startDefense.setOnClickListener(this);
         Button stopDefense = (Button) layout.findViewById(R.id.pauseDefense);
-        stopDefense.setOnClickListener(this);
+        stopDefense.setOnClickListener(this);*/
         Button startClimb = (Button) layout.findViewById(R.id.startClimb);
         startClimb.setOnClickListener(this);
         Button stopClimb = (Button) layout.findViewById(R.id.pauseClimb);
@@ -88,18 +89,13 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
         checkBox.setOnClickListener(this);
         checkBox1.setOnClickListener(this);
         checkBox2.setOnClickListener(this);
-        radioGroup0 = (RadioGroup) layout.findViewById(R.id.dump1);
-        radioButton0 = (RadioButton) layout.findViewById(R.id.dump1rb0);
-        radioButton1 = (RadioButton) layout.findViewById(R.id.dump1rb1);
-        radioButton2 = (RadioButton) layout.findViewById(R.id.dump1rb2);
-        radioButton3 = (RadioButton) layout.findViewById(R.id.dump1rb3);
-        radioButton4 = (RadioButton) layout.findViewById(R.id.dump1rb4);
-        radioGroup0.setOnClickListener(this);
 
-        radioGroup1 = (RadioGroup) layout.findViewById(R.id.dump2);
-        radioGroup2 = (RadioGroup) layout.findViewById(R.id.dump3);
-        radioGroup3 = (RadioGroup) layout.findViewById(R.id.dump4);
-        radioGroup4 = (RadioGroup) layout.findViewById(R.id.dump5);
+        radioGroup0 = (RadioGroup) layout.findViewById(R.id.dump1);
+
+        radioGroup0.setOnCheckedChangeListener(this);
+
+
+        //radioGroup0.setOnClickListener(this);
 
 
         //    Button resetButton = (Button) layout.findViewById(R.id.reset_button);
@@ -147,7 +143,7 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.startcollect:
+            /*case R.id.startcollect:
                 onClickStart(v, 0);
                 break;
             case R.id.pausecollect:
@@ -164,7 +160,7 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
                 break;
             case R.id.pauseDefense:
                 onClickStop(v, 2);
-                break;
+                break;*/
             case R.id.startClimb:
                 onClickStart(v, 3);
                 break;
@@ -182,52 +178,62 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
                 if(checkBox.isChecked()){
                     i = 1;
                 }else{
-                    i = 0;
+                     i = 0;
                 }
 
                 scoutingFlowActivity.getData().setAltshot(i);
             case R.id.cbblockedpeg:
                 CheckBox checkBox1 = (CheckBox) v;
                 if(checkBox1.isChecked()){
-                    j = 1;
+                     j = 1;
                 }else{
-                    j = 0;
+                     j = 0;
                 }
 
                 scoutingFlowActivity.getData().setBlockedpeg(j);
             case R.id.cbpreventedclimb:
                 CheckBox checkBox2 = (CheckBox) v;
                 if(checkBox2.isChecked()){
-                    k = 1;
+                     k = 1;
                 }else{
-                    k = 0;
+                     k = 0;
                 }
                 scoutingFlowActivity.getData().setPreventclimb(k);
-                //case R.id.collectballstimereturn:
-                //   scoutingFlowActivity.getData().setCollectballssw(R.id.collectballstimereturn);
+/*
             case R.id.dump1:
                 int id0 = radioGroup0.getCheckedRadioButtonId();
                 radioButton0 = (RadioButton) radioGroup0.findViewById(id0);
                 scoutingFlowActivity.getData().setFd1(radioButton0.getText().toString());
-            case R.id.dump2:
-                int id1 = radioGroup1.getCheckedRadioButtonId();
-                radioButton1 = (RadioButton) radioGroup1.findViewById(id1);
-                scoutingFlowActivity.getData().setFd2(radioButton1.getText().toString());
-            case R.id.dump3:
-                int id2 = radioGroup2.getCheckedRadioButtonId();
-                radioButton2 = (RadioButton) radioGroup2.findViewById(id2);
-                scoutingFlowActivity.getData().setFd3(radioButton2.getText().toString());
-            case R.id.dump4:
-                int id3 = radioGroup3.getCheckedRadioButtonId();
-                radioButton3 = (RadioButton) radioGroup3.findViewById(id3);
-                scoutingFlowActivity.getData().setFd4(radioButton3.getText().toString());
-            case R.id.dump5:
-                int id4 = radioGroup4.getCheckedRadioButtonId();
-                radioButton4 = (RadioButton) radioGroup4.findViewById(id4);
-                scoutingFlowActivity.getData().setFd5(radioButton4.getText().toString());
-
+*/
         }
     }
+
+
+
+
+
+        public void onCheckedChanged(RadioGroup radioGroup0, int checkedId) {
+        // checkedId is the RadioButton selected
+
+        switch(checkedId) {
+            case R.id.dump1rb0:
+                scoutingFlowActivity.getData().setFd1("0");
+                break;
+            case R.id.dump1rb1:
+                scoutingFlowActivity.getData().setFd1("5");
+                break;
+            case R.id.dump1rb2:
+                scoutingFlowActivity.getData().setFd1("15");
+                break;
+            case R.id.dump1rb3:
+                scoutingFlowActivity.getData().setFd1("25");
+                break;
+            case R.id.dump1rb4:
+                scoutingFlowActivity.getData().setFd1("35");
+                break;
+        }
+    }
+
 
     public void onClickStart(View view, int ii) {
         running[ii] = true;
@@ -302,65 +308,8 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
         scoutingFlowActivity.getData().setClimbingStats(climbingStats);
     }
 
-    private void runTimer(View view) {
-        timeView = (EditText) view.findViewById(R.id.time_view);
-        final Handler handler = new Handler();
-        handler.post(new Runnable() {
-            //@Override
-            public void run() {
-                int hours = seconds / 3600;
-                int minutes = (seconds % 3600) / 60;
-                int secs = seconds % 60;
-                String time = String.format("%d:%02d:%02d", hours, minutes, secs);
-                timeView.setText(time);
-                if (running[0]) {
-                    seconds++;
-                }
-                handler.postDelayed(this, 1000);
-            }
-        });
-    }
-
-    private void runTimer2(View view) {
-        timeView1 = (EditText) view.findViewById(R.id.shoothightimereturn);
-        final Handler handler1 = new Handler();
-        handler1.post(new Runnable() {
-            @Override
-            public void run() {
-                int hours1 = seconds1 / 3600;
-                int minutes1 = (seconds1 % 3600) / 60;
-                int secs1 = seconds1 % 60;
-                String time = String.format("%d:%02d:%02d", hours1, minutes1, secs1);
-                timeView1.setText(time);
-                if (running[1]) {
-                    seconds1++;
-                }
-                handler1.postDelayed(this, 1000);
-            }
-        });
-    }
-
-    private void runTimer3(View view) {
-        timeView2 = (EditText) view.findViewById(R.id.defensetimereturn);
-        final Handler handler2 = new Handler();
-        handler2.post(new Runnable() {
-            @Override
-            public void run() {
-                int hours2 = seconds2 / 3600;
-                int minutes2 = (seconds2 % 3600) / 60;
-                int secs2 = seconds2 % 60;
-                String time = String.format("%d:%02d:%02d", hours2, minutes2, secs2);
-                timeView2.setText(time);
-                if (running[2]) {
-                    seconds2++;
-                }
-                handler2.postDelayed(this, 1000);
-            }
-        });
-    }
-
     private void runTimer4(View view) {
-        timeView3 = (EditText) view.findViewById(R.id.climbtimereturn);
+        timeView3 = (TextView) view.findViewById(R.id.climbtimereturn);
         final Handler handler3 = new Handler();
         handler3.post(new Runnable() {
             @Override
@@ -373,7 +322,7 @@ public class TeleopFragment extends Fragment implements View.OnClickListener, Sp
                 if (running[3]) {
                     seconds3++;
                 }
-                handler3.postDelayed(this, 1000);
+                handler3.postDelayed(this, 0);
             }
         });
     }

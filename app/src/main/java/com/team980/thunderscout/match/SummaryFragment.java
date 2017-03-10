@@ -14,32 +14,19 @@ import android.widget.Spinner;
 import com.team980.thunderscout.R;
 import com.team980.thunderscout.data.enumeration.ClimbingStats;
 
-public class SummaryFragment extends Fragment implements View.OnClickListener{
+public class SummaryFragment extends Fragment {
 
     private ScoutingFlowActivity scoutingFlowActivity;
-    private int m = 0;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View layout =  inflater.inflate(R.layout.fragment_summary, container, false);
-        CheckBox checkBox3 = (CheckBox) layout.findViewById(R.id.pilot);
-        checkBox3.setOnClickListener(this);
 
         return layout;
     }
 
-    public void onClick(View v){
-        if(v.getId() == R.id.pilot) {
-            CheckBox checkBox3 = (CheckBox) v;
-            if (checkBox3.isChecked()) {
-                m = 1;
-            } else {
-                m = 0;
-            }
 
-            scoutingFlowActivity.getData().setPilot(m);
-        }
-    }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {

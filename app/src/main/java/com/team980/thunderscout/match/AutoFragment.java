@@ -9,16 +9,22 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.util.Log;
 
 import com.team980.thunderscout.R;
 import com.team980.thunderscout.data.enumeration.FuelDumpAmount;
 
-public class AutoFragment extends Fragment implements View.OnClickListener {
+public class AutoFragment extends Fragment implements View.OnClickListener, android.widget.RadioGroup.OnCheckedChangeListener {
 
     ScoutingFlowActivity scoutingFlowActivity;
+    private int m = 0; int del = 0; int drop = 0;
+    private RadioGroup lowgoalgroup;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -31,6 +37,16 @@ public class AutoFragment extends Fragment implements View.OnClickListener {
 
         CheckBox crossedBaseline = (CheckBox) view.findViewById(R.id.auto_checkBoxCrossedBaseline);
         crossedBaseline.setOnClickListener(this);
+        CheckBox checkBox3 = (CheckBox) view.findViewById(R.id.AutoPilot);
+        checkBox3.setOnClickListener(this);
+        CheckBox checkBoxdel = (CheckBox) view.findViewById(R.id.AutoGearsDelivered);
+        checkBoxdel.setOnClickListener(this);
+        CheckBox checkBoxdrop = (CheckBox) view.findViewById(R.id.AutoDroppedGears);
+        checkBoxdrop.setOnClickListener(this);
+        lowgoalgroup = (RadioGroup) view.findViewById(R.id.autohigh);
+        lowgoalgroup.setOnCheckedChangeListener(this);
+        //lowgoalgroup.setOnClickListener(this);
+
 
         Button minus = (Button) view.findViewById(R.id.auto_buttonFuelMinus);
         Button plus = (Button) view.findViewById(R.id.auto_buttonFuelPlus);
@@ -55,12 +71,67 @@ public class AutoFragment extends Fragment implements View.OnClickListener {
         super.onDetach();
     }
 
+    public void onCheckedChanged(RadioGroup lowgoalgroup, int checkedId) {
+        // checkedId is the RadioButton selected
+
+        switch(checkedId) {
+            case R.id.high0:
+                scoutingFlowActivity.getData().setFd1("0");
+                break;
+            case R.id.high1:
+                scoutingFlowActivity.getData().setFd1("5");
+                break;
+            case R.id.high2:
+                scoutingFlowActivity.getData().setFd1("15");
+                break;
+            case R.id.high3:
+                scoutingFlowActivity.getData().setFd1("25");
+                break;
+            case R.id.high4:
+                scoutingFlowActivity.getData().setFd1("35");
+                break;
+        }
+    }
+
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.auto_checkBoxCrossedBaseline) {
             CheckBox checkBox = (CheckBox) view;
             scoutingFlowActivity.getData().setCrossedBaseline(checkBox.isChecked());
-        } else {
+
+        } else if (view.getId() == R.id.AutoPilot) {
+                CheckBox checkBox3 = (CheckBox) view;
+                if (checkBox3.isChecked()) {
+                    m = 1;
+                } else {
+                    m = 0;
+                }
+
+                scoutingFlowActivity.getData().setPilot(m);
+        } else if (view.getId() == R.id.AutoGearsDelivered) {
+            CheckBox checkBoxdel = (CheckBox) view;
+            if (checkBoxdel.isChecked()) {
+                del = 1;
+            } else {
+                del = 0;
+            }
+
+            scoutingFlowActivity.getData().setAutoGearsDelivered(del);
+        } else if (view.getId() == R.id.AutoDroppedGears) {
+            CheckBox checkBoxdrop = (CheckBox) view;
+            if (checkBoxdrop.isChecked()) {
+                drop = 1;
+            } else {
+                drop = 0;
+            }
+
+            scoutingFlowActivity.getData().setAutoGearsDropped(drop);
+
+
+
+        }else {
+
+
             FuelDumpAmount value = scoutingFlowActivity.getData().getAutoLowGoalDumpAmount();
 
             if (view.getId() == R.id.auto_buttonFuelPlus) {

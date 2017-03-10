@@ -32,38 +32,41 @@ public class ScoutData implements Serializable {
     private String dataSource;
 
     // AUTO
-    private int autoGearsDelivered;
+    private int pilot;
+    private String fd2;
     private FuelDumpAmount autoLowGoalDumpAmount;
-    private int autoHighGoals;
-    private int autoMissedHighGoals;
     private boolean crossedBaseline;
+    private int autoGearsDelivered;
+    private int autoDroppedGears;
+    //private int autoHighGoals;
+    //private int autoMissedHighGoals;
+
 
     // TELEOP
+    private String climbtimer;
     private int teleopGearsDelivered;
-    private int collectgearschute;
-    private int collectgearsfloor;
+    private int teleopcollectgearschute;
+    private int teleopcollectgearsfloor;
     private int teleopgearsscored;
-    private ArrayList<FuelDumpAmount> teleopLowGoalDumps; //average # of fuel
-    private int teleopHighGoals;
-    private int teleopMissedHighGoals;
-    private ClimbingStats climbingStats;
-    private String time_view;
+    private int teleopgearsdropped;
     private String fd1;
-    private String fd2;
-    private String fd3;
-    private String fd4;
-    private String fd5;
+    private String shootAcc;
+    private int highCycles;
+    private int dumpCycles;
     private int altshot;
     private int preventclimb;
     private int blockedpeg;
     private String other;
-
+    private ClimbingStats climbingStats;
+    private ArrayList<FuelDumpAmount> teleopLowGoalDumps; //average # of fuel
+    private int teleopHighGoals;
+    private int teleopMissedHighGoals;
 
 
     // SUMMARY
     private String troubleWith;
     private String comments;
-    private int pilot;
+
 
 
     public ScoutData() {
@@ -85,36 +88,41 @@ public class ScoutData implements Serializable {
         setDataSource(other.getDataSource());
 
         //Auto
-        setAutoGearsDelivered(other.getAutoGearsDelivered());
+        setPilot(other.getPilot());
         setAutoLowGoalDumpAmount(other.getAutoLowGoalDumpAmount());
-        setAutoHighGoals(other.getAutoHighGoals());
-        setAutoMissedHighGoals(other.getAutoMissedHighGoals());
+        setFd2(other.getFd2());
         setCrossedBaseline(other.hasCrossedBaseline());
+        setAutoGearsDelivered(other.getAutoGearsDelivered());
+        setAutoGearsDropped(other.getAutoGearsDropped());
+        //setAutoHighGoals(other.getAutoHighGoals());
+        //setAutoMissedHighGoals(other.getAutoMissedHighGoals());
+
 
         //Teleop
+        setClimbtimer(other.getClimbtimer());
         setTeleopGearsDelivered(other.getTeleopGearsDelivered());
         setCollectGearsChute(other.getCollectGearsChute());
         setCollectGearsFloor(other.getCollectGearsFloor());
         setTeleopGearsScored(other.getTeleopGearsScored());
-        setCollectballssw(other.getCollectballssw());
+        setTeleopGearsDropped(other.getTeleopGearsDropped());
         setFd1(other.getFd1());
-        setFd2(other.getFd2());
-        setFd3(other.getFd3());
-        setFd4(other.getFd4());
-        setFd5(other.getFd5());
+        setShootingAccuracy(other.getShootingAccuracy());
+        setShootingCycles(other.getShootingCycles());
+        setLowDumpCycles(other.getLowDumpCycles());
         setAltshot(other.getAltshot());
         setPreventclimb(other.getPreventclimb());
         setBlockedpeg(other.getBlockedpeg());
         setOther(other.getOther());
+        setClimbingStats(other.getClimbingStats());
         teleopLowGoalDumps = other.getTeleopLowGoalDumps();
         setTeleopHighGoals(other.getTeleopHighGoals());
         setTeleopMissedHighGoals(other.getTeleopMissedHighGoals());
-        setClimbingStats(other.getClimbingStats());
+
 
         //Summary
         setTroubleWith(other.getTroubleWith());
         setComments(other.getComments());
-        setPilot(other.getPilot());
+
     }
 
     // --- INIT ---
@@ -160,13 +168,10 @@ public class ScoutData implements Serializable {
     }
 
     // --- AUTO ---
+    public int getPilot() { return pilot; }
 
-    public int getAutoGearsDelivered() {
-        return autoGearsDelivered;
-    }
-
-    public void setAutoGearsDelivered(int autoGearsDelivered) {
-        this.autoGearsDelivered = autoGearsDelivered;
+    public void setPilot(int pilot) {
+        this.pilot = pilot;
     }
 
     public FuelDumpAmount getAutoLowGoalDumpAmount() {
@@ -177,21 +182,14 @@ public class ScoutData implements Serializable {
         this.autoLowGoalDumpAmount = autoLowGoalDumpAmount;
     }
 
-    public int getAutoHighGoals() {
-        return autoHighGoals;
+    public String getFd2() {
+        return fd2;
     }
 
-    public void setAutoHighGoals(int autoHighGoals) {
-        this.autoHighGoals = autoHighGoals;
+    public void setFd2 (String fd2) {
+        this.fd2 = fd2;
     }
 
-    public int getAutoMissedHighGoals() {
-        return autoMissedHighGoals;
-    }
-
-    public void setAutoMissedHighGoals(int autoMissedHighGoals) {
-        this.autoMissedHighGoals = autoMissedHighGoals;
-    }
 
     public boolean hasCrossedBaseline() {
         return crossedBaseline;
@@ -201,7 +199,34 @@ public class ScoutData implements Serializable {
         this.crossedBaseline = crossedBaseline;
     }
 
+    public int getAutoGearsDelivered() {
+        return autoGearsDelivered;
+    }
+
+    public void setAutoGearsDelivered(int autoGearsDelivered) {
+        this.autoGearsDelivered = autoGearsDelivered;
+    }
+
+    public int getAutoGearsDropped() {
+        return autoDroppedGears;
+    }
+
+    public void setAutoGearsDropped(int autoDroppedGears) {
+        this.autoDroppedGears = autoDroppedGears;
+    }
+
+
+
     // --- TELEOP ---
+
+    public String getClimbtimer() {
+        return climbtimer;
+    }
+
+    public void setClimbtimer (String time_view) {
+        this.climbtimer = time_view;
+    }
+
 
     public int getTeleopGearsDelivered() {
         return teleopGearsDelivered;
@@ -212,36 +237,37 @@ public class ScoutData implements Serializable {
     }
 
     public int getCollectGearsChute() {
-        return collectgearschute;
+        return teleopcollectgearschute;
     }
 
     public void setCollectGearsChute(int collectgearschute) {
-        this.collectgearschute = collectgearschute;
+        this.teleopcollectgearschute = collectgearschute;
     }
 
     public int getCollectGearsFloor() {
-        return collectgearschute;
+        return teleopcollectgearsfloor;
     }
 
     public void setCollectGearsFloor (int collectgearsfloor) {
-        this.collectgearsfloor = collectgearsfloor;
+        this.teleopcollectgearsfloor = collectgearsfloor;
     }
 
     public int getTeleopGearsScored() {
         return teleopgearsscored;
     }
 
-    public void setTeleopGearsScored (int collectgearsfloor) {
+    public void setTeleopGearsScored (int teleopgearsscored) {
         this.teleopgearsscored = teleopgearsscored;
     }
 
-    public String getCollectballssw() {
-        return time_view;
+    public int getTeleopGearsDropped() {
+        return teleopgearsdropped;
     }
 
-    public void setCollectballssw (String time_view) {
-        this.time_view = time_view;
+    public void setTeleopGearsDropped (int teleopgearsdropped) {
+        this.teleopgearsdropped = teleopgearsdropped;
     }
+
 
     public String getFd1() {
         return fd1;
@@ -251,37 +277,30 @@ public class ScoutData implements Serializable {
         this.fd1 = fd1;
     }
 
-    public String getFd2() {
-        return fd2;
+    public String getShootingAccuracy() {
+        return shootAcc;
     }
 
-    public void setFd2 (String fd2) {
-        this.fd2 = fd2;
+    public void setShootingAccuracy (String shootAcc) {
+        this.shootAcc = shootAcc;
     }
 
-    public String getFd3() {
-        return fd3;
+    public int getShootingCycles() {
+        return highCycles;
     }
 
-    public void setFd3 (String fd3) {
-        this.fd3 = fd3;
+    public void setShootingCycles (int highCycles) {
+        this.highCycles = highCycles;
     }
 
-    public String getFd4() {
-        return fd4;
+    public int getLowDumpCycles() {
+        return dumpCycles;
     }
 
-    public void setFd4 (String fd4) {
-        this.fd4 = fd4;
+    public void setLowDumpCycles (int dumpCycles) {
+        this.dumpCycles = dumpCycles;
     }
 
-    public String getFd5() {
-        return fd5;
-    }
-
-    public void setFd5 (String fd5) {
-        this.fd5 = fd5;
-    }
 
     public int getAltshot() {
         return altshot;
@@ -315,6 +334,15 @@ public class ScoutData implements Serializable {
         this.other = other;
     }
 
+    public ClimbingStats getClimbingStats() {
+        return climbingStats;
+    }
+
+    public void setClimbingStats(ClimbingStats climbingStats) {
+        this.climbingStats = climbingStats;
+    }
+
+
     public ArrayList<FuelDumpAmount> getTeleopLowGoalDumps() {
         return teleopLowGoalDumps;
     }
@@ -335,13 +363,7 @@ public class ScoutData implements Serializable {
         this.teleopMissedHighGoals = teleopMissedHighGoals;
     }
 
-    public ClimbingStats getClimbingStats() {
-        return climbingStats;
-    }
 
-    public void setClimbingStats(ClimbingStats climbingStats) {
-        this.climbingStats = climbingStats;
-    }
 
     // --- SUMMARY ---
 
@@ -359,11 +381,7 @@ public class ScoutData implements Serializable {
         this.comments = comments;
     }
 
-    public int getPilot() { return pilot; }
 
-    public void setPilot(int pilot) {
-        this.pilot = pilot;
-    }
 
     // --- OTHER METHODS ---
 
@@ -378,10 +396,9 @@ public class ScoutData implements Serializable {
         fieldList.add(getDataSource());
 
         //Auto
-        fieldList.add(String.valueOf(getAutoGearsDelivered()));
+        fieldList.add(String.valueOf(getPilot()));
         fieldList.add(getAutoLowGoalDumpAmount().name());
-        fieldList.add(String.valueOf(getAutoHighGoals()));
-        fieldList.add(String.valueOf(getAutoMissedHighGoals()));
+        fieldList.add(String.valueOf(getFd2()));
         if (hasCrossedBaseline())
         {
             fieldList.add("1");
@@ -390,32 +407,38 @@ public class ScoutData implements Serializable {
         {
             fieldList.add("0");
         }
+        fieldList.add(String.valueOf(getAutoGearsDelivered()));
+        fieldList.add(String.valueOf(getAutoGearsDropped()));
+        //fieldList.add(String.valueOf(getAutoHighGoals()));
+        //fieldList.add(String.valueOf(getAutoMissedHighGoals()));
+
 
 
         //Teleop
+        fieldList.add(String.valueOf(getClimbtimer()));
         fieldList.add(String.valueOf(getTeleopGearsDelivered()));
         fieldList.add(String.valueOf(getCollectGearsChute()));
         fieldList.add(String.valueOf(getCollectGearsFloor()));
         fieldList.add(String.valueOf(getTeleopGearsScored()));
-        fieldList.add(String.valueOf(getCollectballssw()));
+        fieldList.add(String.valueOf(getTeleopGearsDropped()));
         fieldList.add(String.valueOf(getFd1()));
-        fieldList.add(String.valueOf(getFd2()));
-        fieldList.add(String.valueOf(getFd3()));
-        fieldList.add(String.valueOf(getFd4()));
-        fieldList.add(String.valueOf(getFd5()));
+        fieldList.add(String.valueOf(getShootingAccuracy()));
+        fieldList.add(String.valueOf(getShootingCycles()));
+        fieldList.add(String.valueOf(getLowDumpCycles()));
         fieldList.add(String.valueOf(getAltshot()));
         fieldList.add(String.valueOf(getPreventclimb()));
         fieldList.add(String.valueOf(getBlockedpeg()));
         fieldList.add(String.valueOf(getOther()));
+        fieldList.add(getClimbingStats().name());
         fieldList.add(getTeleopLowGoalDumps().toString());
         fieldList.add(String.valueOf(getTeleopHighGoals()));
         fieldList.add(String.valueOf(getTeleopMissedHighGoals()));
-        fieldList.add(getClimbingStats().name());
+
 
         //Summary
         fieldList.add(getTroubleWith());
         fieldList.add(getComments());
-        fieldList.add(String.valueOf(getPilot()));
+
 
         return (String[]) fieldList.toArray(new String[fieldList.size()]);
     }
