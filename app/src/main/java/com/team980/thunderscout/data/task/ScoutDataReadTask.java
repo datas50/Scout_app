@@ -80,6 +80,7 @@ public class ScoutDataReadTask extends AsyncTask<Void, ScoutData, Void> {
                 ScoutDataTable.COLUMN_NAME_AUTO_HIGH_GOALS,
                 ScoutDataTable.COLUMN_NAME_AUTO_CROSSED_BASELINE,
                 ScoutDataTable.COLUMN_NAME_AUTO_GEARS_DELIVERED,
+                ScoutDataTable.COLUMN_NAME_STARTING_POSITION,
                 ScoutDataTable.COLUMN_NAME_AUTO_GEARS_DROPPED,
                 ScoutDataTable.COLUMN_NAME_CLIMB_TIME,
                 ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_DELIVERED,
@@ -101,7 +102,8 @@ public class ScoutDataReadTask extends AsyncTask<Void, ScoutData, Void> {
                 ScoutDataTable.COLUMN_NAME_TELEOP_MISSED_HIGH_GOALS,
 
                 ScoutDataTable.COLUMN_NAME_TROUBLE_WITH,
-                ScoutDataTable.COLUMN_NAME_COMMENTS
+                ScoutDataTable.COLUMN_NAME_COMMENTS,
+                ScoutDataTable.COLUMN_NAME_ROBOT_SUMMARY
         };
 
         // How you want the results sorted in the resulting Cursor
@@ -198,6 +200,12 @@ public class ScoutDataReadTask extends AsyncTask<Void, ScoutData, Void> {
                 cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_AUTO_GEARS_DELIVERED));
 
         data.setAutoGearsDelivered(autoGearsDelivered);
+
+        String startPos = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_STARTING_POSITION));
+
+        data.setstartPos(startPos);
+
 
 
         int autoDroppedGears = cursor.getInt(
@@ -311,6 +319,12 @@ public class ScoutDataReadTask extends AsyncTask<Void, ScoutData, Void> {
                 cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_COMMENTS));
 
         data.setComments(comments);
+
+        String robotPerformance = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataTable.COLUMN_NAME_ROBOT_SUMMARY));
+
+        data.setrobotPerformance(robotPerformance);
+
 
 
 

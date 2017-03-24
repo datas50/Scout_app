@@ -63,6 +63,7 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_AUTO_HIGH_GOALS,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_AUTO_CROSSED_BASELINE,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_AUTO_GEARS_DELIVERED,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_STARTING_POSITION,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_AUTO_GEARS_DROPPED,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_CLIMB_TIME,
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_GEARS_DELIVERED,
@@ -85,7 +86,8 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TELEOP_MISSED_HIGH_GOALS,
 
                 ScoutDataContract.ScoutDataTable.COLUMN_NAME_TROUBLE_WITH,
-                ScoutDataContract.ScoutDataTable.COLUMN_NAME_COMMENTS
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_COMMENTS,
+                ScoutDataContract.ScoutDataTable.COLUMN_NAME_ROBOT_SUMMARY
         };
 
         // How you want the results sorted in the resulting Cursor
@@ -218,6 +220,11 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
 
         data.setAutoGearsDelivered(autoGearsDelivered);
 
+        String startPos = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_STARTING_POSITION));
+
+        data.setstartPos(startPos);
+
         int autoDroppedGears = cursor.getInt(
                 cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_AUTO_GEARS_DROPPED));
 
@@ -332,6 +339,12 @@ public class CSVExportTask extends AsyncTask<Void, String, File> {
                 cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_COMMENTS));
 
         data.setComments(comments);
+
+        String robotPerformance = cursor.getString(
+                cursor.getColumnIndexOrThrow(ScoutDataContract.ScoutDataTable.COLUMN_NAME_ROBOT_SUMMARY));
+
+        data.setrobotPerformance(robotPerformance);
+
 
 
 

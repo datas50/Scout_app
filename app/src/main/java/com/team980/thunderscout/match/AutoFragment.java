@@ -25,7 +25,6 @@ public class AutoFragment extends Fragment implements View.OnClickListener, andr
     private int m = 0; int del = 0; int drop = 0;
     private RadioGroup highgoalgroup;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_auto, container, false);
@@ -45,7 +44,6 @@ public class AutoFragment extends Fragment implements View.OnClickListener, andr
         checkBoxdrop.setOnClickListener(this);
         highgoalgroup = (RadioGroup) view.findViewById(R.id.autohigh);
         highgoalgroup.setOnCheckedChangeListener(this);
-        //lowgoalgroup.setOnClickListener(this);
 
 
         Button minus = (Button) view.findViewById(R.id.auto_buttonFuelMinus);
@@ -71,27 +69,29 @@ public class AutoFragment extends Fragment implements View.OnClickListener, andr
         super.onDetach();
     }
 
-    public void onCheckedChanged(RadioGroup highgoalgroup, int checkedId1) {
-        // checkedId is the RadioButton selected
 
-        switch(checkedId1) {
-            case R.id.high0:
-                scoutingFlowActivity.getData().setFd2("0");
-                break;
-            case R.id.high1:
-                scoutingFlowActivity.getData().setFd2("5");
-                break;
-            case R.id.high2:
-                scoutingFlowActivity.getData().setFd2("15");
-                break;
-            case R.id.high3:
-                scoutingFlowActivity.getData().setFd2("25");
-                break;
-            case R.id.high4:
-                scoutingFlowActivity.getData().setFd2("35");
-                break;
+
+    public void onCheckedChanged(RadioGroup group, int checkedId1) {
+
+            switch (checkedId1) {
+                case R.id.high0:
+                    scoutingFlowActivity.getData().setFd2("0");
+                    break;
+                case R.id.high1:
+                    scoutingFlowActivity.getData().setFd2("3");
+                    break;
+                case R.id.high2:
+                    scoutingFlowActivity.getData().setFd2("7");
+                    break;
+                case R.id.high3:
+                    scoutingFlowActivity.getData().setFd2("15");
+                    break;
+                case R.id.high4:
+                    scoutingFlowActivity.getData().setFd2("25");
+
         }
     }
+
 
     @Override
     public void onClick(View view) {

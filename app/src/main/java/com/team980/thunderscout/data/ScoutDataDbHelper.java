@@ -8,7 +8,7 @@ import static com.team980.thunderscout.data.ScoutDataContract.ScoutDataTable;
 
 public class ScoutDataDbHelper extends SQLiteOpenHelper {
     // If you change the database schema, you must increment the database version.
-    public static final int DATABASE_VERSION = 5;
+    public static final int DATABASE_VERSION = 9;
 
     public static final String DATABASE_NAME = "ThunderScout_SCOUT_DATA_2017.db"; //Store year in database name but DO NOT CHANGE FORMAT
 
@@ -32,6 +32,7 @@ public class ScoutDataDbHelper extends SQLiteOpenHelper {
                     ScoutDataTable.COLUMN_NAME_AUTO_HIGH_GOALS + TEXT_TYPE + COMMA_SEP +
                     ScoutDataTable.COLUMN_NAME_AUTO_CROSSED_BASELINE + INTEGER_TYPE + COMMA_SEP +
                     ScoutDataTable.COLUMN_NAME_AUTO_GEARS_DELIVERED + INTEGER_TYPE + COMMA_SEP +
+                    ScoutDataTable.COLUMN_NAME_STARTING_POSITION + TEXT_TYPE + COMMA_SEP +
                     ScoutDataTable.COLUMN_NAME_AUTO_GEARS_DROPPED + INTEGER_TYPE + COMMA_SEP +
 
                     ScoutDataTable.COLUMN_NAME_CLIMB_TIME + TEXT_TYPE + COMMA_SEP +
@@ -56,7 +57,9 @@ public class ScoutDataDbHelper extends SQLiteOpenHelper {
 
 
                     ScoutDataTable.COLUMN_NAME_TROUBLE_WITH + TEXT_TYPE + COMMA_SEP +
-                    ScoutDataTable.COLUMN_NAME_COMMENTS + TEXT_TYPE +  ")";
+                    ScoutDataTable.COLUMN_NAME_COMMENTS + TEXT_TYPE + COMMA_SEP +
+                    ScoutDataTable.COLUMN_NAME_ROBOT_SUMMARY + TEXT_TYPE + ")";
+
 
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + ScoutDataTable.TABLE_NAME;

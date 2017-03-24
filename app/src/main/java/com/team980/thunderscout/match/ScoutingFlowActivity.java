@@ -369,7 +369,9 @@ public class ScoutingFlowActivity extends AppCompatActivity implements ViewPager
         // Auto
         View autoView = viewPagerAdapter.getItem(0).getView();
 
+        EditText sp = (EditText)  autoView.findViewById(R.id.spos);
 
+        scoutData.setstartPos(sp.getText().toString());
 
         // Teleop
         View teleopView = viewPagerAdapter.getItem(1).getView();

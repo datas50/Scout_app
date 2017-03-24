@@ -11,24 +11,6 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginRight="5dp"
-            android:text="Climbing Stats"
-            android:textSize="18sp" />
-
-        <Spinner
-            android:id="@+id/summary_spinnerClimbingStats"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="5dp"
-            android:entries="@array/climbing_stats_array" />
-
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -75,6 +57,83 @@
             </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Summary"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/summaryrbgroup"
+                android:checkedButton="@+id/summaryrb0">
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/summaryrb0"
+                    android:text="Fully working"/>
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/summaryrb1"
+                    android:text="Partially working"/>
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/summaryrb2"
+                    android:text="No show"/>
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/summaryrb3"
+                    android:text="Died"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="1000dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="DO NOT FILL OUT ANYTHING BELOW THIS"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:text="Climbing Stats"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/summary_spinnerClimbingStats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:entries="@array/climbing_stats_array" />
 
     </LinearLayout>
 

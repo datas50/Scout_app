@@ -38,6 +38,7 @@ public class ScoutData implements Serializable {
     private FuelDumpAmount autoLowGoalDumpAmount;
     private boolean crossedBaseline;
     private int autoGearsDelivered;
+    private String startPos;
     private int autoDroppedGears;
     //private int autoHighGoals;
     //private int autoMissedHighGoals;
@@ -67,6 +68,7 @@ public class ScoutData implements Serializable {
     // SUMMARY
     private String troubleWith;
     private String comments;
+    private String robotPerformance;
 
 
 
@@ -94,6 +96,7 @@ public class ScoutData implements Serializable {
         setFd2(other.getFd2());
         setCrossedBaseline(other.hasCrossedBaseline());
         setAutoGearsDelivered(other.getAutoGearsDelivered());
+        setstartPos(other.getstartPos());
         setAutoGearsDropped(other.getAutoGearsDropped());
         //setAutoHighGoals(other.getAutoHighGoals());
         //setAutoMissedHighGoals(other.getAutoMissedHighGoals());
@@ -123,6 +126,7 @@ public class ScoutData implements Serializable {
         //Summary
         setTroubleWith(other.getTroubleWith());
         setComments(other.getComments());
+        setrobotPerformance(other.getrobotPerformance());
 
     }
 
@@ -206,6 +210,14 @@ public class ScoutData implements Serializable {
 
     public void setAutoGearsDelivered(int autoGearsDelivered) {
         this.autoGearsDelivered = autoGearsDelivered;
+    }
+
+    public String getstartPos() {
+        return startPos;
+    }
+
+    public void setstartPos(String startPos) {
+        this.startPos = startPos;
     }
 
     public int getAutoGearsDropped() {
@@ -382,6 +394,14 @@ public class ScoutData implements Serializable {
         this.comments = comments;
     }
 
+    public String getrobotPerformance() { return robotPerformance; }
+
+    public void setrobotPerformance(String robotPerformance) {
+        this.robotPerformance = robotPerformance;
+    }
+
+
+
 
 
     // --- OTHER METHODS ---
@@ -411,6 +431,7 @@ public class ScoutData implements Serializable {
             fieldList.add("0");
         }
         fieldList.add(String.valueOf(getAutoGearsDelivered()));
+        fieldList.add(String.valueOf(getstartPos()));
         fieldList.add(String.valueOf(getAutoGearsDropped()));
         //fieldList.add(String.valueOf(getAutoHighGoals()));
         //fieldList.add(String.valueOf(getAutoMissedHighGoals()));
@@ -439,8 +460,9 @@ public class ScoutData implements Serializable {
 
 
         //Summary
-        fieldList.add(getTroubleWith());
-        fieldList.add(getComments());
+        fieldList.add(String.valueOf(getTroubleWith()));
+        fieldList.add(String.valueOf(getComments()));
+        fieldList.add(String.valueOf(getrobotPerformance()));
 
 
         return (String[]) fieldList.toArray(new String[fieldList.size()]);

@@ -26,6 +26,7 @@ public final class ScoutDataContract {
         public static final String COLUMN_NAME_AUTO_HIGH_GOALS = "auto_high_goals";
         public static final String COLUMN_NAME_AUTO_CROSSED_BASELINE = "auto_crossed_baseline";
         public static final String COLUMN_NAME_AUTO_GEARS_DELIVERED = "auto_gears_delivered";
+        public static final String COLUMN_NAME_STARTING_POSITION = "starting_position";
         public static final String COLUMN_NAME_AUTO_GEARS_DROPPED = "auto_gears_dropped";
 
         // --- TELEOP ---
@@ -41,8 +42,8 @@ public final class ScoutDataContract {
         public static final String COLUMN_NAME_SHOOTING_ACCURACY = "Shooting_accuracy";
         public static final String COLUMN_NAME_SHOOTING_CYCLES = "Shooting_cycles";
         public static final String COLUMN_NAME_LOW_DUMP_CYCLES = "Low_dump_cycles";
-        public static final String COLUMN_NAME_ALTER_SHOT = "altshot";
-        public static final String COLUMN_NAME_PREVENT_CLIMB = "preventclimb";
+        public static final String COLUMN_NAME_ALTER_SHOT = "block_middle";
+        public static final String COLUMN_NAME_PREVENT_CLIMB = "block_passage";
         public static final String COLUMN_NAME_BLOCKED_PEG = "blockedpeg";
         public static final String COLUMN_NAME_OTHER = "other";
         public static final String COLUMN_NAME_CLIMBING_STATS = "climbing_stats";
@@ -53,6 +54,7 @@ public final class ScoutDataContract {
         // --- SUMMARY ---
         public static final String COLUMN_NAME_TROUBLE_WITH = "trouble_with";
         public static final String COLUMN_NAME_COMMENTS = "comments";
+        public static final String COLUMN_NAME_ROBOT_SUMMARY = "robot_performance";
 
     }
 }

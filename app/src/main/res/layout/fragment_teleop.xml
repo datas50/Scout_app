@@ -24,33 +24,69 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginRight="5dp"
-                    android:text="Climb"
-                    android:textSize="18sp"/>
-                <Button
-                    android:id="@+id/startClimb"
-                    android:text="Start"
-                    android:layout_width="200dp"
-                    android:layout_height="120dp"
-                    android:background="#6ca88a" />
-                <Button
-                    android:id="@+id/pauseClimb"
-                    android:text="Pause"
-                    android:layout_width="200dp"
-                    android:layout_height="120dp"
-                    android:background="#e55858" />
-                <TextView
-                    android:text ="0:00:000"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="100dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:text="Climb"
+                        android:textSize="18sp"/>
+                    <Button
+                        android:id="@+id/startClimb"
+                        android:text="Start"
+                        android:layout_width="200dp"
+                        android:layout_height="120dp"
+                        android:background="#6ca88a" />
+                    <Button
+                        android:id="@+id/pauseClimb"
+                        android:text="Pause"
+                        android:layout_width="200dp"
+                        android:layout_height="120dp"
+                        android:background="#e55858" />
+                    <TextView
+                        android:text ="0:00:000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/climbtimereturn" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/climbtimereturn" />
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:text="Climbing Stats"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/teleop_spinnerClimbingStats"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:entries="@array/climbing_stats_array" />
+
+                </LinearLayout>
+
 
             </LinearLayout>
 
@@ -144,6 +180,37 @@
                     </LinearLayout>
                 </LinearLayout>
 
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dropped Gears"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <com.team980.thunderscout.util.CounterCompoundView
+                            android:id="@+id/teleop_counterDropGears"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="18sp"
+                            android:layout_weight="7.85"
+                            android:layout_gravity="center">
+                        </com.team980.thunderscout.util.CounterCompoundView>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -220,29 +287,6 @@
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     android:weightSum="1">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="5dp"
-                        android:text="Drop Gears"
-                        android:textSize="18sp" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <com.team980.thunderscout.util.CounterCompoundView
-                            android:id="@+id/teleop_counterDropGears"
-                            android:layout_width="wrap_content"
-                            android:layout_height="42dp"
-                            android:layout_marginLeft="5dp"
-                            android:textSize="18sp"
-                            android:layout_gravity="center">
-                        </com.team980.thunderscout.util.CounterCompoundView>
-                    </LinearLayout>
 
                 </LinearLayout>
             </LinearLayout>
@@ -513,12 +557,12 @@
                     android:id="@+id/cbalteredshot"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:text="Altered Shot" />
+                    android:text="Block Middle" />
                 <CheckBox
                     android:id="@+id/cbpreventedclimb"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:text="Prevented Climb" />
+                    android:text="Block Passage" />
                 <CheckBox
                     android:id="@+id/cbblockedpeg"
                     android:layout_width="wrap_content"
@@ -547,7 +591,13 @@
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="40dp" />
+            android:layout_height="400dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="DO NOT FILL OUT ANYTHING BELOW THIS"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -556,30 +606,6 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-                <Spinner
-                    android:id="@+id/teleop_spinnerClimbingStats"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:entries="@array/climbing_stats_array" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="5dp"
-                    android:text="Climbing Stats"
-                    android:textSize="18sp" />
-
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"

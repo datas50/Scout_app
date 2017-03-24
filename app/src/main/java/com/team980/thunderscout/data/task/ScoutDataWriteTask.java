@@ -69,6 +69,7 @@ public class ScoutDataWriteTask extends AsyncTask<Void, Integer, Void> {
         values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_AUTO_HIGH_GOALS, data.getFd2());
         values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_AUTO_CROSSED_BASELINE, data.hasCrossedBaseline());
         values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_AUTO_GEARS_DELIVERED, data.getAutoGearsDelivered());
+        values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_STARTING_POSITION, data.getstartPos());
         values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_AUTO_GEARS_DROPPED, data.getAutoGearsDropped());
 
         // Teleop
@@ -95,6 +96,7 @@ public class ScoutDataWriteTask extends AsyncTask<Void, Integer, Void> {
         // Summary
         values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_TROUBLE_WITH, data.getTroubleWith());
         values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_COMMENTS, data.getComments());
+        values.put(ScoutDataContract.ScoutDataTable.COLUMN_NAME_ROBOT_SUMMARY, data.getrobotPerformance());
 
 
         try {

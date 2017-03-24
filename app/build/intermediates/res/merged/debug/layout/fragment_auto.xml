@@ -34,7 +34,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginRight="5dp"
-                    android:text="Team's pilot is on airshift"
+                    android:text="Team's pilot is on airship"
                     android:textSize="18sp" />
 
                 <CheckBox
@@ -133,40 +133,41 @@
                 android:checkedButton="@+id/high0">
 
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:id="@+id/high0"
-                    android:text="N/A"/>
+                    android:text="0"
+                    android:layout_width="60dp" />
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:id="@+id/high1"
-                    android:text="0-9"/>
+                    android:text="1-5"
+                    android:layout_width="60dp" />
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:id="@+id/high2"
-                    android:text="10-19"/>
+                    android:text="6-9"
+                    android:layout_width="60dp" />
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:id="@+id/high3"
-                    android:text="20-29"/>
+                    android:text="10-19"
+                    android:layout_width="72dp" />
+
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:id="@+id/high4"
-                    android:text="30+"/>
+                    android:text="20+"/>
 
 
             </RadioGroup>
@@ -249,6 +250,34 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:text="Starting Position"
+                android:textSize="18sp" />
+
+            <EditText
+                android:layout_width="142dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="1, 2, or 3"
+                android:textSize="24sp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:id="@+id/spos"/>
+
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -277,4 +306,3 @@
     </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>
-
