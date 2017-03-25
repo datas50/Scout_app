@@ -23,13 +23,15 @@
                 android:id="@+id/summary_tilTroubleWith"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColorHint="@android:color/white"
                 android:hint="Trouble with?">
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/summary_edittextTroubleWith"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="20" />
+                    android:ems="20"
+                    android:textColor="@android:color/white" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -46,13 +48,15 @@
                 android:id="@+id/summary_tilComments"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColorHint="@android:color/white"
                 android:hint="Comments">
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/summary_edittextComments"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="20" />
+                    android:ems="20"
+                    android:textColor="@android:color/white" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -82,28 +86,36 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/summaryrb0"
-                    android:text="Fully working"/>
+                    android:text="Fully working"
+                    android:textColor="@android:color/white"
+                    app:buttonTint="@android:color/white" />
                 <RadioButton
                     android:layout_width="100dp"
                     android:layout_height="60dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/summaryrb1"
-                    android:text="Partially working"/>
+                    android:text="Partially working"
+                    app:buttonTint="@android:color/white"
+                    android:textColor="@android:color/white" />
                 <RadioButton
                     android:layout_width="100dp"
                     android:layout_height="60dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/summaryrb2"
-                    android:text="No show"/>
+                    android:text="No show"
+                    app:buttonTint="@android:color/white"
+                    android:textColor="@android:color/white" />
                 <RadioButton
                     android:layout_width="100dp"
                     android:layout_height="60dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/summaryrb3"
-                    android:text="Died"/>
+                    android:text="Died"
+                    app:buttonTint="@android:color/white"
+                    android:textColor="@android:color/white" />
             </RadioGroup>
 
         </LinearLayout>

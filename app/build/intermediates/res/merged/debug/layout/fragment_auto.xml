@@ -23,11 +23,11 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_height="60dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -35,12 +35,60 @@
                     android:layout_gravity="center"
                     android:layout_marginRight="5dp"
                     android:text="Team's pilot is on airship"
-                    android:textSize="18sp" />
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white" />
 
                 <CheckBox
                     android:id="@+id/AutoPilot"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:textColor="@android:color/white"
+                    android:buttonTint="@android:color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:text="Starting Position"
+                        android:textSize="24sp"
+                        android:textColor="@android:color/white" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[1:Boiler  2:Middle  3:Chute]"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+
+
+
+
+                <EditText
+                    android:layout_gravity="center"
+                    android:textSize="24sp"
+                    android:inputType="number"
+                    android:id="@+id/spos"
+                    android:textColor="@android:color/white"
+                    android:layout_width="120dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:layout_height="60dp" />
 
             </LinearLayout>
 
@@ -48,261 +96,332 @@
                 android:layout_width="wrap_content"
                 android:layout_height="20dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:text="Fuel Dumped in Low Goal"
-                android:textSize="18sp" />
-
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/auto_buttonFuelMinus"
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:text="-"
-                    android:textColor="@color/accent"
-                    android:textSize="20sp" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/auto_textViewFuelValue"
-                        android:layout_width="128dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:gravity="center"
-                        android:text="State"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <TextView
-                        android:id="@+id/auto_textViewFuelNumericalValue"
-                        android:layout_width="128dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:gravity="center"
-                        android:text="0 - 0"
-                        android:textAppearance="?android:attr/textAppearanceSmall" />
-                </LinearLayout>
-
-                <Button
-                    android:id="@+id/auto_buttonFuelPlus"
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:text="+"
-                    android:textColor="@color/accent"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="16dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:text="High Goal Shots Made"
-                android:textSize="18sp" />
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal"
-                android:id="@+id/autohigh"
-                android:checkedButton="@+id/high0">
-
-                <RadioButton
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:id="@+id/high0"
-                    android:text="0"
-                    android:layout_width="60dp" />
-                <RadioButton
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:id="@+id/high1"
-                    android:text="1-5"
-                    android:layout_width="60dp" />
-                <RadioButton
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:id="@+id/high2"
-                    android:text="6-9"
-                    android:layout_width="60dp" />
-                <RadioButton
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:id="@+id/high3"
-                    android:text="10-19"
-                    android:layout_width="72dp" />
-
-                <RadioButton
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:id="@+id/high4"
-                    android:text="20+"/>
-
-
-            </RadioGroup>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+                    <!--Gear-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Gear"
+                        android:textSize="32sp"
+                        android:textColor="@android:color/holo_orange_dark" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:text="Delivered?"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/white" />
+
+                        <CheckBox
+                            android:id="@+id/AutoGearsDelivered"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:buttonTint="@android:color/holo_orange_light" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:text="Dropped?"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/white" />
+
+                        <CheckBox
+                            android:id="@+id/AutoDroppedGears"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:buttonTint="@android:color/holo_orange_light" />
+
+
+                    </LinearLayout>
+
+
 
                 </LinearLayout>
+                <!--End of gear-->
+
+
+                <Space
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <!--Fuel-->
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Fuel"
+                        android:textSize="32sp"
+                        android:textColor="@android:color/holo_green_light" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:text="High Goal Shots Made"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/white" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:id="@+id/autohigh"
+                            android:checkedButton="@+id/high0">
+
+                            <RadioButton
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:id="@+id/high0"
+                                android:text="0"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:textSize="24sp"
+                                android:buttonTint="@android:color/holo_green_light" />
+                            <RadioButton
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:id="@+id/high1"
+                                android:text="1-5"
+                                android:layout_width="80dp"
+                                android:textSize="24sp"
+                                android:layout_height="80dp"
+                                android:buttonTint="@android:color/holo_green_light" />
+                            <RadioButton
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:id="@+id/high2"
+                                android:text="6-9"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:textSize="24sp"
+                                android:buttonTint="@android:color/holo_green_light" />
+
+                            <RadioButton
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:id="@+id/high3"
+                                android:text="10-19"
+                                android:layout_height="80dp"
+                                android:textSize="24sp"
+                                android:layout_width="100dp"
+                                android:buttonTint="@android:color/holo_green_light" />
+
+                            <RadioButton
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:id="@+id/high4"
+                                android:text="20+"
+                                android:layout_height="80dp"
+                                android:textSize="24sp"
+                                android:layout_width="100dp"
+                                android:buttonTint="@android:color/holo_green_light" />
+
+
+                        </RadioGroup>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:text="Fuel Dumped in Low Goal"
+                        android:textSize="24sp"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/auto_buttonFuelMinus"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:text="-"
+                            android:textColor="@android:color/holo_green_light"
+                            android:textSize="40sp"
+                            android:background="?attr/selectableItemBackground" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/auto_textViewFuelValue"
+                                android:layout_width="128dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:gravity="center"
+                                android:text="State"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@android:color/white"
+                                android:textSize="24sp" />
+
+                            <TextView
+                                android:id="@+id/auto_textViewFuelNumericalValue"
+                                android:layout_width="128dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:gravity="center"
+                                android:text="0 - 0"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="@android:color/holo_green_light"
+                                android:textSize="24sp" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/auto_buttonFuelPlus"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:text="+"
+                            android:textColor="@android:color/holo_green_light"
+                            android:textSize="40sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                    <Space
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <!--Baseline-->
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Baseline"
+                                android:textSize="32sp"
+                                android:textColor="@android:color/holo_blue_bright" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginRight="8dp"
+                                        android:text="Crossed?"
+                                        android:textSize="24sp"
+                                        android:textColor="@android:color/white" />
+
+                                    <CheckBox
+                                        android:id="@+id/auto_checkBoxCrossedBaseline"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_marginRight="5dp"
+                                        app:buttonTint="@android:color/holo_blue_bright" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
 
             </LinearLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="16dp"
-            android:orientation="horizontal">
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="0dp"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginRight="8dp"
-                android:text="Crossed Baseline?"
-                android:textSize="18sp" />
-
-            <CheckBox
-                android:id="@+id/auto_checkBoxCrossedBaseline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginRight="5dp"
-                android:text="Gears Delivered"
-                android:textSize="18sp" />
-
-            <CheckBox
-                android:id="@+id/AutoGearsDelivered"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginRight="5dp"
-                android:text="Starting Position"
-                android:textSize="18sp" />
-
-            <EditText
-                android:layout_width="142dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="1, 2, or 3"
-                android:textSize="24sp"
-                android:inputType="number"
-                android:textAlignment="center"
-                android:id="@+id/spos"/>
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginRight="5dp"
-                android:text="Dropped Gear"
-                android:textSize="18sp" />
-
-            <CheckBox
-                android:id="@+id/AutoDroppedGears"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-
-        </LinearLayout>
-
     </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>

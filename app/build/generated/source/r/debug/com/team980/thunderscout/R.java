@@ -3104,8 +3104,8 @@ containing a value of this type.
         public static final int notify_panel_notification_icon_bg=0x7f0200aa;
     }
     public static final class id {
-        public static final int AutoDroppedGears=0x7f0f00b6;
-        public static final int AutoGearsDelivered=0x7f0f00b4;
+        public static final int AutoDroppedGears=0x7f0f00ab;
+        public static final int AutoGearsDelivered=0x7f0f00aa;
         public static final int AutoPilot=0x7f0f00a8;
         public static final int DefenseOptions=0x7f0f00dc;
         public static final int action0=0x7f0f0112;
@@ -3144,13 +3144,13 @@ containing a value of this type.
         public static final int always=0x7f0f0040;
         public static final int app_bar_layout=0x7f0f007e;
         public static final int auto=0x7f0f0025;
-        public static final int auto_buttonFuelMinus=0x7f0f00a9;
-        public static final int auto_buttonFuelPlus=0x7f0f00ac;
-        public static final int auto_checkBoxCrossedBaseline=0x7f0f00b3;
+        public static final int auto_buttonFuelMinus=0x7f0f00b2;
+        public static final int auto_buttonFuelPlus=0x7f0f00b5;
+        public static final int auto_checkBoxCrossedBaseline=0x7f0f00b6;
         public static final int auto_scrollView=0x7f0f00a7;
-        public static final int auto_textViewFuelNumericalValue=0x7f0f00ab;
-        public static final int auto_textViewFuelValue=0x7f0f00aa;
-        public static final int autohigh=0x7f0f00ad;
+        public static final int auto_textViewFuelNumericalValue=0x7f0f00b4;
+        public static final int auto_textViewFuelValue=0x7f0f00b3;
+        public static final int autohigh=0x7f0f00ac;
         public static final int beginning=0x7f0f003c;
         public static final int bottom=0x7f0f0026;
         public static final int buttonPanel=0x7f0f0056;
@@ -3219,11 +3219,11 @@ containing a value of this type.
         public static final int group_bottom=0x7f0f012f;
         public static final int group_top=0x7f0f012c;
         public static final int hello=0x7f0f00b7;
-        public static final int high0=0x7f0f00ae;
-        public static final int high1=0x7f0f00af;
-        public static final int high2=0x7f0f00b0;
-        public static final int high3=0x7f0f00b1;
-        public static final int high4=0x7f0f00b2;
+        public static final int high0=0x7f0f00ad;
+        public static final int high1=0x7f0f00ae;
+        public static final int high2=0x7f0f00af;
+        public static final int high3=0x7f0f00b0;
+        public static final int high4=0x7f0f00b1;
         public static final int home=0x7f0f0004;
         public static final int homeAsUp=0x7f0f0013;
         public static final int horizontal=0x7f0f0038;
@@ -3347,7 +3347,7 @@ containing a value of this type.
         public static final int snap=0x7f0f001d;
         public static final int spacer=0x7f0f0057;
         public static final int split_action_bar=0x7f0f0008;
-        public static final int spos=0x7f0f00b5;
+        public static final int spos=0x7f0f00a9;
         public static final int src_atop=0x7f0f0021;
         public static final int src_in=0x7f0f0022;
         public static final int src_over=0x7f0f0023;
